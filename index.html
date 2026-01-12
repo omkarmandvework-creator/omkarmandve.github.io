@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+    Home page (landing page) for Omkar Mandve's personal portfolio.
+    This page introduces visitors to the portfolio and invites them to explore
+    projects, experience, blog posts, skills, and more. The layout is fully
+    responsive and uses semantic HTML with an external stylesheet and
+    JavaScript file for styling and interaction.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Omkar Mandve portfolio – finance professional, valuation specialist and Oracle ERP consultant." />
+    <title>Omkar Mandve | Finance, Valuation &amp; ERP</title>
+    <!-- Link to site‑wide CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Load site‑wide JavaScript. The defer attribute ensures the script runs
+         after the HTML is parsed, improving performance -->
+    <script defer src="assets/js/script.js"></script>
+</head>
+<body>
+    <!-- Site header with navigation. The nav menu is responsive and collapses
+         into a toggleable menu on smaller screens. -->
+    <header class="site-header">
+        <nav class="navbar container">
+            <div class="brand"><a href="index.html">Omkar&nbsp;Mandve</a></div>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="projects/index.html">Projects</a></li>
+                <li><a href="experience/index.html">Experience</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="skills/index.html">Skills</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area. The hero section welcomes visitors and briefly
+         describes Omkar's expertise. A call‑to‑action encourages exploring
+         the projects section. -->
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <h1>Finance &amp; Valuation Professional</h1>
+                <p class="lead">
+                    I’m Omkar Mandve, a CFA Level I candidate and finance consultant
+                    specializing in equity valuation, financial modelling and Oracle ERP.
+                    Explore my work, experience, and ideas.
+                </p>
+                <a class="btn primary" href="projects/index.html">View Projects</a>
+            </div>
+        </section>
+
+        <!-- Featured highlights. Each card links to a top‑level section. Use
+             this area to surface important content quickly. You can add or
+             remove cards as needed. -->
+        <section class="highlights">
+            <div class="container grid">
+                <a class="card" href="projects/index.html">
+                    <h3>Projects</h3>
+                    <p>Valuation engines, ERP implementations and automation initiatives.</p>
+                </a>
+                <a class="card" href="experience/index.html">
+                    <h3>Experience</h3>
+                    <p>Detailed breakdown of roles at Infosys and government valuation.</p>
+                </a>
+                <a class="card" href="blog/index.html">
+                    <h3>Blog</h3>
+                    <p>Thoughts on finance, economics, markets and technology.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site footer with copyright information. Automatically updates year via JS. -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Omkar Mandve. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

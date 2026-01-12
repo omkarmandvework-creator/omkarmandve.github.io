@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+    Projects listing page. This page provides an overview of all major projects
+    completed by Omkar Mandve. Each project card links to a dedicated
+    project page with more details. The layout uses CSS grid for a clean
+    presentation and is fully responsive.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio projects by Omkar Mandve – valuation tools, ERP implementations and analytics." />
+    <title>Projects | Omkar Mandve</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script defer src="../assets/js/script.js"></script>
+</head>
+<body>
+    <!-- Reuse the site header from the home page. Use relative paths since
+         this page is inside the projects folder. -->
+    <header class="site-header">
+        <nav class="navbar container">
+            <div class="brand"><a href="../index.html">Omkar&nbsp;Mandve</a></div>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Projects</a></li>
+                <li><a href="../experience/index.html">Experience</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../skills/index.html">Skills</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Projects page content -->
+    <main id="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Projects</h1>
+                <p class="lead">
+                    Explore the tools, models and implementations I’ve built. Each card
+                    opens a dedicated page with objectives, approach, stack and impact.
+                </p>
+            </div>
+        </section>
+        <section class="project-list">
+            <div class="container grid">
+                <!-- Example project card. Duplicate this block for additional projects.
+                     Link points to the folder containing the project page (index.html). -->
+                <a class="card" href="dcf-valuation-engine/index.html">
+                    <h3>Automated DCF Valuation Engine</h3>
+                    <p>Python pipeline for standardized discounted cash flow modelling.</p>
+                </a>
+                <a class="card" href="erp-crp-playbook/index.html">
+                    <h3>ERP CRP &amp; Fit‑Gap Playbook</h3>
+                    <p>Guided sessions, issue triage and fit‑gap analysis for Oracle ERP.</p>
+                </a>
+                <a class="card" href="blog-analytics-platform/index.html">
+                    <h3>Analytics &amp; Reporting Platform</h3>
+                    <p>Custom dashboards and automation for finance data in Power BI.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Omkar Mandve.</p>
+        </div>
+    </footer>
+</body>
+</html>

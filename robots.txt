@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omkarmandvework-creator.github.io/omkarmandve.github.work/sitemap.xml

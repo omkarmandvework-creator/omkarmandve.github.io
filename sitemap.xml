@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Simple sitemap listing top-level pages. Update the loc values to
+    match your actual domain or GitHub Pages URL after deployment.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://omkarmandvework-creator.github.io/omkarmandve.github.work/</loc>
+    </url>
+    <url>
+        <loc>https://omkarmandvework-creator.github.io/omkarmandve.github.work/projects/</loc>
+    </url>
+    <url>
+        <loc>https://omkarmandvework-creator.github.io/omkarmandve.github.work/experience/</loc>
+    </url>
+    <url>
+        <loc>https://omkarmandvework-creator.github.io/omkarmandve.github.work/blog/</loc>
+    </url>
+    <url>
+        <loc>https://omkarmandvework-creator.github.io/omkarmandve.github.work/skills/</loc>
+    </url>
+    <url>
+        <loc>https://omkarmandvework-creator.github.io/omkarmandve.github.work/about/</loc>
+    </url>
+    <url>
+        <loc>https://omkarmandvework-creator.github.io/omkarmandve.github.work/contact/</loc>
+    </url>
+    <!-- Add other page URLs here as you create more content -->
+</urlset>

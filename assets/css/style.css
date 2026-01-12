@@ -1,0 +1,315 @@
+/*
+ * Main stylesheet for the portfolio. Defines colours, typography,
+ * layout helpers and component styles. The design follows a dark
+ * theme with accent colours and focuses on clarity and readability.
+ */
+
+/* CSS Custom Properties for easy theming */
+:root {
+    --color-bg: #0e1a2b;
+    --color-surface: #16273e;
+    --color-text: #f5f5f5;
+    --color-muted: #9daecb;
+    --color-accent: #f4c35b;
+    --color-card: #1d2f4c;
+    --border-radius: 12px;
+    --max-width: 1100px;
+    --spacing-1: 0.5rem;
+    --spacing-2: 0.75rem;
+    --spacing-3: 1rem;
+    --spacing-4: 1.5rem;
+    --spacing-5: 2rem;
+    --font-scale-h1: clamp(2rem, 2.5vw + 1rem, 3rem);
+    --font-scale-h2: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Container utility for consistent max width */
+.container {
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+}
+
+/* Navigation styles */
+.site-header {
+    background: var(--color-surface);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--spacing-2);
+}
+
+.brand a {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-4);
+}
+
+.nav-menu a {
+    color: var(--color-muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--border-radius);
+}
+
+.nav-menu a[aria-current="page"],
+.nav-menu a:hover {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-surface);
+        flex-direction: column;
+        display: none;
+        padding: var(--spacing-3);
+    }
+    .nav-menu.open {
+        display: flex;
+    }
+    .nav-menu li + li {
+        margin-top: var(--spacing-2);
+    }
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(180deg, rgba(14, 26, 43, 0.4), rgba(14, 26, 43, 1)),
+        url('../img/hero-bg.png') center/cover no-repeat;
+    padding-block: var(--spacing-5);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: var(--font-scale-h1);
+    margin-bottom: var(--spacing-2);
+}
+
+.hero .lead {
+    max-width: 60ch;
+    margin-inline: auto;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-muted);
+}
+
+/* Highlights / cards section */
+.highlights .grid,
+.project-list .grid,
+.experience-list .grid,
+.blog-list .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-4);
+    margin-block: var(--spacing-4);
+}
+
+.card {
+    background: var(--color-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-3);
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    margin-bottom: var(--spacing-1);
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+/* Page header for internal pages */
+.page-header {
+    padding-block: var(--spacing-4);
+    background: var(--color-surface);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: var(--font-scale-h2);
+    margin-bottom: var(--spacing-2);
+}
+
+.page-header .lead {
+    max-width: 70ch;
+    margin-inline: auto;
+    color: var(--color-muted);
+}
+
+/* Two-column layout for detail pages */
+.two-col {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-4);
+    margin-block: var(--spacing-4);
+}
+
+@media (max-width: 900px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Blog post content styles */
+.blog-post h2,
+.project-detail h2,
+.experience-detail h2 {
+    margin-top: var(--spacing-3);
+    margin-bottom: var(--spacing-2);
+    font-size: 1.5rem;
+}
+
+.blog-post p,
+.project-detail p,
+.experience-detail p {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-muted);
+}
+
+/* List styling */
+ul {
+    list-style-position: inside;
+    margin-bottom: var(--spacing-3);
+}
+
+li {
+    margin-bottom: var(--spacing-1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+.btn:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    text-decoration: none;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: var(--spacing-1);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--color-surface);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-block: var(--spacing-3);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
+/* Simple classes for back links */
+.back-link {
+    margin-block: var(--spacing-4);
+}
+
+.back-link .btn {
+    margin-top: var(--spacing-2);
+}
+
+/* Accessibility: hide focus outlines on mouse users, keep for keyboard */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+    outline: none;
+}

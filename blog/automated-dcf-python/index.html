@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Blog post: Automating DCF Models with Python. A short overview of
+    building and automating discounted cash flow models using Python. Use
+    headings and paragraphs to structure the content for readability.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How to automate discounted cash flow models in Python – blog by Omkar Mandve." />
+    <title>Automating DCF Models with Python | Blog | Omkar Mandve</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <script defer src="../../assets/js/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <div class="brand"><a href="../../index.html">Omkar&nbsp;Mandve</a></div>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../projects/index.html">Projects</a></li>
+                <li><a href="../../experience/index.html">Experience</a></li>
+                <li><a href="../index.html" aria-current="page">Blog</a></li>
+                <li><a href="../../skills/index.html">Skills</a></li>
+                <li><a href="../../about/index.html">About</a></li>
+                <li><a href="../../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Automating DCF Models with Python</h1>
+                <p class="lead">A practical approach to standardized valuation pipelines.</p>
+            </div>
+        </section>
+        <section class="blog-post">
+            <div class="container">
+                <p>
+                    Discounted cash flow (DCF) analysis remains the cornerstone of equity
+                    valuation. Yet building these models by hand is cumbersome and prone
+                    to inconsistencies. By leveraging Python’s data processing and
+                    automation capabilities, we can create repeatable workflows that
+                    handle data ingestion, forecasting, cost of capital calculations and
+                    even Excel output generation.
+                </p>
+                <h2>Standardizing the data layer</h2>
+                <p>
+                    The first step is to normalize financial statements into a common
+                    schema. Using <code>pandas</code>, we map income statement, balance
+                    sheet and cash flow items into standard line items across companies.
+                    This ensures comparability and simplifies downstream calculations.
+                </p>
+                <h2>Forecasting with drivers</h2>
+                <p>
+                    Rather than projecting each line manually, set up driver-based
+                    forecasts. For example, model revenue growth, margin trends and
+                    working capital assumptions that feed into free cash flow (FCF)
+                    calculations. Scenario flags allow sensitivity analysis.
+                </p>
+                <h2>Computing WACC and terminal value</h2>
+                <p>
+                    Use CAPM inputs to compute the cost of equity and blend with the
+                    cost of debt. Both terminal value methods – Gordon Growth and
+                    Exit Multiple – should be supported. These calculations become
+                    functions that can be reused across valuations.
+                </p>
+                <h2>Automating Excel outputs</h2>
+                <p>
+                    Finally, automate the creation of professional Excel workbooks using
+                    libraries like <code>openpyxl</code>. This ensures analysts receive
+                    polished models with consistent formatting, ready for presentations.
+                </p>
+                <p><a class="btn" href="../index.html">Back to Blog</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Omkar Mandve.</p></div></footer>
+</body>
+</html>

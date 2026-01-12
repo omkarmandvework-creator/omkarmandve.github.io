@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    Contact page. Provides a simple form for visitors to reach out and
+    displays direct contact information. The form triggers a client‑side
+    alert upon submission to simulate sending a message.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Omkar Mandve for finance consulting, valuation projects and collaborations." />
+    <title>Contact | Omkar Mandve</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script defer src="../assets/js/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <div class="brand"><a href="../index.html">Omkar&nbsp;Mandve</a></div>
+            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects/index.html">Projects</a></li>
+                <li><a href="../experience/index.html">Experience</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../skills/index.html">Skills</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="index.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact</h1>
+                <p class="lead">Send a message or reach me via email/LinkedIn.</p>
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="container two-col">
+                <div>
+                    <h2>Send a Message</h2>
+                    <!-- Contact form. When submitted, it triggers a JS alert and does not
+                         actually send data. If you later deploy to a server, replace this
+                         with a proper form handler. -->
+                    <form id="contact-form">
+                        <label>
+                            Name<br />
+                            <input type="text" name="name" required />
+                        </label>
+                        <label>
+                            Email<br />
+                            <input type="email" name="email" required />
+                        </label>
+                        <label>
+                            Message<br />
+                            <textarea name="message" rows="6" required></textarea>
+                        </label>
+                        <button type="submit" class="btn primary">Submit</button>
+                    </form>
+                </div>
+                <div>
+                    <h2>Direct Contact</h2>
+                    <p>You can also reach me directly via:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:omkar.mandve.work@gmail.com">omkar.mandve.work@gmail.com</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/omkar-mandve/" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+                        <li>GitHub: <a href="https://github.com/omkarmandvework-creator" target="_blank" rel="noopener">omkarmandvework-creator</a></li>
+                    </ul>
+                    <p>I am open to opportunities in Israel, Singapore, EU, Australia and New Zealand.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Omkar Mandve.</p></div></footer>
+</body>
+</html>
