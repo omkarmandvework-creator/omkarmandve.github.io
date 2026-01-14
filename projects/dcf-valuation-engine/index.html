@@ -1,87 +1,193 @@
 <!DOCTYPE html>
-<!--
-    Detailed project page for the Automated DCF Valuation Engine. This page
-    explains the problem it solves, the approach taken, the technical stack
-    used and the impact of the solution. Replace the placeholder text with
-    specifics about your project.
--->
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Automated DCF Valuation Engine – project details by Omkar Mandve." />
-    <title>Automated DCF Valuation Engine | Omkar Mandve</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
-    <script defer src="../../assets/js/script.js"></script>
-</head>
-<body>
-    <header class="site-header">
-        <nav class="navbar container">
-            <div class="brand"><a href="../../index.html">Omkar&nbsp;Mandve</a></div>
-            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-            <ul class="nav-menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../index.html" aria-current="page">Projects</a></li>
-                <li><a href="../../experience/index.html">Experience</a></li>
-                <li><a href="../../blog/index.html">Blog</a></li>
-                <li><a href="../../skills/index.html">Skills</a></li>
-                <li><a href="../../about/index.html">About</a></li>
-                <li><a href="../../contact/index.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DCF Valuation Engine (NVDA) | Omkar Mandve</title>
+  <meta name="description" content="Automated DCF valuation engine for NVIDIA (NVDA) using Python + Excel. Includes forecasting, terminal value, and exported Excel model." />
 
-    <main id="main">
-        <section class="page-header">
-            <div class="container">
-                <h1>Automated DCF Valuation Engine</h1>
-                <p class="lead">Standardizing discounted cash flow models across companies using Python.</p>
-            </div>
-        </section>
-        <section class="project-detail">
-            <div class="container two-col">
-                <div>
-                    <h2>Problem</h2>
-                    <p>
-                        Traditional DCF models can be inconsistent and time‑consuming. Analysts
-                        spend hours manually forecasting financial statements, calculating
-                        weighted average cost of capital (WACC) and building Excel outputs.
-                    </p>
-                    <h2>Approach</h2>
-                    <p>
-                        I built a Python pipeline that ingests company financials, normalizes
-                        data into a consistent schema, applies forecast drivers, computes
-                        WACC via CAPM and produces scenario‑ready DCF models. The system
-                        generates multi‑sheet Excel workbooks automatically.
-                    </p>
-                    <h2>Impact</h2>
-                    <p>
-                        The automated workflow reduces model build time from days to hours
-                        and ensures repeatable, defensible assumptions. It supports scenario
-                        analysis and accelerates investment decision making.
-                    </p>
-                </div>
-                <aside>
-                    <h3>Technologies</h3>
-                    <ul>
-                        <li>Python (pandas, numpy)</li>
-                        <li>CAPM &amp; WACC calculations</li>
-                        <li>Excel automation with openpyxl</li>
-                    </ul>
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="#" title="GitHub repository" class="external">GitHub (coming soon)</a></li>
-                        <li><a href="#" title="Download sample model" class="external">Sample model</a></li>
-                    </ul>
-                </aside>
-            </div>
-        </section>
-        <section class="back-link container">
-            <a class="btn" href="../index.html">Back to Projects</a>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container"><p>&copy; <span id="year"></span> Omkar Mandve.</p></div>
+  <!-- Project-local CSS (self-contained) -->
+  <link rel="stylesheet" href="project.css" />
+
+  <!-- OPTIONAL: If your site has a global CSS you want to apply, uncomment below -->
+  <!-- <link rel="stylesheet" href="../../css/style.css" /> -->
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a class="backlink" href="../index.html">← Back to Projects</a>
+      <div class="rightlinks">
+        <a class="pill" href="https://github.com/omkarmandve2123-debug/Equity_DCF_Engine" target="_blank" rel="noopener">GitHub Repo</a>
+        <a class="pill" href="../../index.html">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Equity DCF Valuation Engine — NVIDIA (NVDA)</h1>
+        <p class="subtitle">
+          End-to-end DCF valuation workflow built using <strong>Python + Excel</strong>.
+          Covers data prep, FCF modeling, forecasting, terminal value, equity value per share, and Excel export.
+        </p>
+
+        <div class="meta">
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Finance Analytics / Valuation</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Stack</span>
+            <span class="meta-value">Python (Pandas, NumPy), Jupyter, Excel</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Deliverables</span>
+            <span class="meta-value">Notebook + Excel model + Screenshots</span>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="downloads/NVDA_DCF_AI2_op.xlsx" download>Download Excel Model</a>
+          <a class="btn" href="downloads/Equity(NVIDIA)_DCF_Valuation.ipynb" download>Download Notebook</a>
+        </div>
+
+        <p class="note">
+          If download doesn’t start: right-click the button → “Save link as…”
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="card">
+          <h2 class="card-title">Quick Summary</h2>
+          <ul class="bullets">
+            <li>Builds historical Free Cash Flow (FCF) table</li>
+            <li>Forecasts revenue, margins, CapEx, D&amp;A, and FCF (multi-year)</li>
+            <li>Terminal value via Gordon Growth and Exit Multiple</li>
+            <li>Outputs equity value and value per share</li>
+            <li>Exports a formatted Excel valuation model</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Problem Statement</h2>
+      <p>
+        Build a reusable and transparent valuation engine that converts financial inputs into a structured DCF model and produces
+        a recruiter-ready Excel output. The emphasis is on <strong>financial logic clarity</strong>, <strong>repeatability</strong>,
+        and <strong>clean presentation</strong>.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Approach</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-subtitle">1) Data Preparation</h3>
+          <p>Normalize historical statements and construct a clean historical FCF series.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-subtitle">2) Forecast Model</h3>
+          <p>Forecast drivers (growth, margins, reinvestment) and compute forward FCF for multiple years.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-subtitle">3) Valuation</h3>
+          <p>Discount future cash flows, estimate terminal value (GGM + Exit Multiple), derive enterprise value and equity value.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-subtitle">4) Output &amp; Reporting</h3>
+          <p>Export a formatted Excel model and include charts/screenshots for quick review.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Outputs (Screenshots)</h2>
+      <p class="muted">
+        Add your real screenshots in <code>images/</code>. If your filenames are different, update them here.
+      </p>
+
+      <div class="gallery">
+        <figure class="shot">
+          <img src="images/dcf_assumptions.png" alt="DCF Assumptions Sheet" />
+          <figcaption>Assumptions Sheet</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <img src="images/fcf_forecast.png" alt="Free Cash Flow Forecast" />
+          <figcaption>FCF Forecast</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <img src="images/dcf_valuation.png" alt="DCF Valuation Summary" />
+          <figcaption>DCF Valuation Summary</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <img src="images/excel_output.png" alt="Excel Output Model Preview" />
+          <figcaption>Excel Output Preview</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Downloads</h2>
+
+      <div class="download-list">
+        <div class="download-item">
+          <div>
+            <div class="download-title">Excel DCF Model</div>
+            <div class="download-desc">Formatted Excel workbook generated from the pipeline.</div>
+          </div>
+          <a class="btn small primary" href="downloads/NVDA_DCF_AI2_op.xlsx" download>Download</a>
+        </div>
+
+        <div class="download-item">
+          <div>
+            <div class="download-title">Jupyter Notebook</div>
+            <div class="download-desc">Step-by-step implementation of the valuation workflow.</div>
+          </div>
+          <a class="btn small" href="downloads/Equity(NVIDIA)_DCF_Valuation.ipynb" download>Download</a>
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip:</strong> Keep downloadable files under ~50–80 MB for smooth downloads on GitHub Pages.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Source Code</h2>
+      <p>
+        The full source code, documentation, and project history are available on GitHub:
+      </p>
+      <p>
+        <a class="link" href="https://github.com/omkarmandve2123-debug/Equity_DCF_Engine" target="_blank" rel="noopener">
+          View Equity_DCF_Engine on GitHub
+        </a>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>README (Preview)</h2>
+      <p>
+        If you want a clean “README-style” page inside your website, open this:
+        <a class="link" href="README-preview.html">README-preview.html</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <span class="muted">©</span> <span class="muted">Omkar Mandve</span>
+      </div>
+      <div class="muted">DCF Valuation Engine</div>
     </footer>
+  </main>
 </body>
 </html>
