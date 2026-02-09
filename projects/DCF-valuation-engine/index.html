@@ -1,191 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NVDA DCF Valuation Engine | Omkar Mandve</title>
-  <meta name="description" content="NVIDIA (NVDA) DCF valuation engine using Python + Excel. Includes notebook, exported model, screenshots, and sensitivity analysis." />
-  <link rel="stylesheet" href="project.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCF Automated Engine - Project</title>
+    <link rel="stylesheet" href="project.css">
 </head>
-
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="backlink" href="../index.html">← Back to Projects</a>
-      <div class="rightlinks">
-        <a class="pill" href="README-preview.html">README</a>
-        <a class="pill" href="https://github.com/omkarmandve2123-debug/Equity_DCF_Engine" target="_blank" rel="noopener">GitHub Repo</a>
-        <a class="pill" href="../../index.html">Home</a>
-      </div>
+    <div class="container">
+        <header>
+            <h1>DCF Automated Engine</h1>
+            <p class="subtitle">Automated Discounted Cash Flow Valuation Model</p>
+        </header>
+
+        <section class="project-description">
+            <h2>About This Project</h2>
+            <p>
+                The DCF Automated Engine is a comprehensive Python-based financial modeling tool that automates 
+                the Discounted Cash Flow (DCF) valuation process. This project provides an end-to-end solution 
+                for valuing companies using free cash flow projections, terminal value calculations, and sensitivity analysis.
+            </p>
+        </section>
+
+        <section class="downloads">
+            <h2>Downloads</h2>
+            <div class="download-grid">
+                <div class="download-item">
+                    <div class="download-icon">📓</div>
+                    <h3>Python Model</h3>
+                    <p>Jupyter Notebook with complete DCF implementation</p>
+                    <a href="DCF_python_Model.ipynb" download class="download-btn">Download DCF_python_Model.ipynb</a>
+                </div>
+                <div class="download-item">
+                    <div class="download-icon">📊</div>
+                    <h3>Excel Model</h3>
+                    <p>Pre-configured Excel model with NVDA example</p>
+                    <a href="nvda_dcf_python_model.xlsx" download class="download-btn">Download nvda_dcf_python_model.xlsx</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Project Visualizations</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="DCF_Assumtions.png" alt="DCF Assumptions" onclick="openModal('DCF_Assumtions.png')">
+                    <p>DCF Assumptions</p>
+                </div>
+                <div class="image-item">
+                    <img src="DCF_Valuation.png" alt="DCF Valuation" onclick="openModal('DCF_Valuation.png')">
+                    <p>DCF Valuation</p>
+                </div>
+                <div class="image-item">
+                    <img src="FCF.png" alt="Free Cash Flow" onclick="openModal('FCF.png')">
+                    <p>Free Cash Flow</p>
+                </div>
+                <div class="image-item">
+                    <img src="Forecast Free cash flow.png" alt="Forecast Free Cash Flow" onclick="openModal('Forecast Free cash flow.png')">
+                    <p>Forecast Free Cash Flow</p>
+                </div>
+                <div class="image-item">
+                    <img src="Historical free cash flow (1).png" alt="Historical Free Cash Flow" onclick="openModal('Historical free cash flow (1).png')">
+                    <p>Historical Free Cash Flow</p>
+                </div>
+                <div class="image-item">
+                    <img src="Sensitivity Analysis.png" alt="Sensitivity Analysis" onclick="openModal('Sensitivity Analysis.png')">
+                    <p>Sensitivity Analysis</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Automated free cash flow projections</li>
+                <li>Terminal value calculations using multiple methods</li>
+                <li>Comprehensive sensitivity analysis</li>
+                <li>Historical data analysis and visualization</li>
+                <li>Excel integration for easy data manipulation</li>
+                <li>Jupyter notebook format for transparency and reproducibility</li>
+            </ul>
+        </section>
+
+        <section class="documentation">
+            <h2>Documentation</h2>
+            <div class="doc-preview">
+                <iframe src="README-preview.html" frameborder="0" class="readme-frame"></iframe>
+            </div>
+        </section>
     </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Equity DCF Valuation Engine — NVIDIA (NVDA)</h1>
-        <p class="subtitle">
-          Python-driven DCF pipeline that builds historical FCF, forecasts key drivers,
-          calculates terminal value (Gordon + Exit Multiple), and exports a structured Excel model.
-        </p>
+    <!-- Modal for image viewing -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
-        <div class="meta">
-          <div class="meta-item">
-            <span class="meta-label">Type</span>
-            <span class="meta-value">Finance Analytics / Valuation</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Stack</span>
-            <span class="meta-value">Python (Pandas, NumPy), Jupyter, Excel</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Deliverables</span>
-            <span class="meta-value">Excel Model + Notebook + Screenshots</span>
-          </div>
-        </div>
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
 
-        <div class="cta-row">
-          <a class="btn primary" href="downloads/nvda_dcf_python_model.xlsx" download>Download Excel Model</a>
-          <a class="btn" href="downloads/DCF_python_Model.ipynb" download>Download Notebook</a>
-        </div>
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
 
-        <div class="mini-links">
-          <a class="mini-link" href="downloads/nvda_dcf_python_model.xlsx">Direct Excel Link</a>
-          <span class="dot">•</span>
-          <a class="mini-link" href="downloads/DCF_python_Model.ipynb">Direct Notebook Link</a>
-        </div>
-
-        <p class="note">
-          If a download fails: right-click → “Save link as…”.
-          If it still fails, your folder/file names don’t match exactly (case-sensitive).
-        </p>
-      </div>
-
-      <div class="hero-right">
-        <div class="card">
-          <h2 class="card-title">Quick Summary</h2>
-          <ul class="bullets">
-            <li>Builds historical Free Cash Flow (FCF) table</li>
-            <li>Forecasts revenue, margins, reinvestment, and forward FCF</li>
-            <li>Terminal value via Gordon Growth + Exit Multiple</li>
-            <li>Discounts cash flows using WACC</li>
-            <li>Exports formatted Excel workbook + sensitivity tables</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Problem Statement</h2>
-      <p>
-        Valuation teams need fast, repeatable and auditable DCF outputs. Manual spreadsheet modeling slows execution
-        and increases error risk. This project automates the valuation workflow to produce consistent, defensible results.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Approach</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3 class="card-subtitle">1) Historical Build</h3>
-          <p>Normalize historical financials and construct a clean historical FCF series.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-subtitle">2) Forecast Drivers</h3>
-          <p>Forecast growth, margins, reinvestment assumptions, and compute forward FCF.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-subtitle">3) DCF Valuation</h3>
-          <p>Discount projected cash flows and estimate terminal value via two methods.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-subtitle">4) Output</h3>
-          <p>Export a structured Excel model and include charts and sensitivity tables.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Outputs (Screenshots)</h2>
-      <p class="muted">
-        These images are loaded from <code>images/</code>. Keep names lowercase and avoid spaces.
-      </p>
-
-      <div class="gallery">
-        <figure class="shot">
-          <img src="images/dcf-assumptions.png" alt="DCF Assumptions (WACC + Forecast Inputs)" loading="lazy" />
-          <figcaption>Assumptions (WACC + Forecast Inputs)</figcaption>
-        </figure>
-
-        <figure class="shot">
-          <img src="images/dcf-valuation.png" alt="DCF Valuation Summary" loading="lazy" />
-          <figcaption>DCF Valuation (Gordon & Exit)</figcaption>
-        </figure>
-
-        <figure class="shot">
-          <img src="images/forecast-fcf.png" alt="Forecast Free Cash Flow Table" loading="lazy" />
-          <figcaption>Forecast Free Cash Flow</figcaption>
-        </figure>
-
-        <figure class="shot">
-          <img src="images/historical-fcf.png" alt="Historical Free Cash Flow Table" loading="lazy" />
-          <figcaption>Historical Free Cash Flow</figcaption>
-        </figure>
-
-        <figure class="shot">
-          <img src="images/fcf-chart.png" alt="Revenue and Free Cash Flow Projections Chart" loading="lazy" />
-          <figcaption>Revenue & FCF Projections</figcaption>
-        </figure>
-
-        <figure class="shot">
-          <img src="images/sensitivity-analysis.png" alt="Sensitivity Analysis Tables" loading="lazy" />
-          <figcaption>Sensitivity Analysis</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Downloads</h2>
-
-      <div class="download-list">
-        <div class="download-item">
-          <div>
-            <div class="download-title">Excel DCF Model</div>
-            <div class="download-desc">Formatted Excel workbook (assumptions, forecast, DCF, value per share).</div>
-          </div>
-          <a class="btn small primary" href="downloads/nvda_dcf_python_model.xlsx" download>Download</a>
-        </div>
-
-        <div class="download-item">
-          <div>
-            <div class="download-title">Jupyter Notebook</div>
-            <div class="download-desc">Step-by-step Python workflow used to generate the model.</div>
-          </div>
-          <a class="btn small" href="downloads/DCF_python_Model.ipynb" download>Download</a>
-        </div>
-      </div>
-
-      <div class="tip">
-        <strong>Rule:</strong> On GitHub Pages, file paths are case-sensitive. If your folder is <code>downloads/</code>,
-        don’t write <code>Downloads/</code>.
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Source Code</h2>
-      <p>
-        Full repository:
-        <a class="link" href="https://github.com/omkarmandve2123-debug/Equity_DCF_Engine" target="_blank" rel="noopener">
-          Equity_DCF_Engine on GitHub
-        </a>
-      </p>
-    </section>
-
-    <footer class="footer">
-      <div class="muted">© Omkar Mandve</div>
-      <div class="muted">NVDA DCF Valuation Engine</div>
-    </footer>
-  </main>
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
-
