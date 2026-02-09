@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>README | NVDA DCF Valuation Engine</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="backlink" href="index.html">← Back to Project</a>
+      <div class="rightlinks">
+        <a class="pill" href="../index.html">Projects</a>
+        <a class="pill" href="https://github.com/omkarmandve2123-debug/Equity_DCF_Engine" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1 class="page-title">Equity DCF Valuation Engine — README</h1>
+      <p class="muted">
+        Recruiter-friendly README view (same styling as project page).
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Overview</h2>
+      <div class="card">
+        <p>
+          This project implements a complete DCF valuation pipeline for NVIDIA (NVDA) using Python + Excel.
+          It builds historical Free Cash Flow, forecasts core drivers, calculates terminal value (Gordon Growth + Exit Multiple),
+          and exports a formatted Excel valuation model.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Key Outputs</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-subtitle">Downloads</h3>
+          <ul class="bullets">
+            <li><a class="link" href="downloads/nvda_dcf_python_model.xlsx">Excel model (.xlsx)</a></li>
+            <li><a class="link" href="downloads/DCF_python_Model.ipynb">Notebook (.ipynb)</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="card-subtitle">Screenshots</h3>
+          <ul class="bullets">
+            <li>Assumptions (WACC + Drivers)</li>
+            <li>Forecast FCF + Historical FCF</li>
+            <li>DCF valuation summary</li>
+            <li>Sensitivity analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How to Run</h2>
+      <div class="card">
+        <ol class="steps">
+          <li>Download the notebook and Excel model from the project page.</li>
+          <li>Open notebook in Jupyter / VS Code.</li>
+          <li>Install dependencies: <code>pandas</code>, <code>numpy</code>, <code>openpyxl</code>.</li>
+          <li>Run all cells to regenerate tables and export the Excel file (if configured).</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Common GitHub Pages Fix</h2>
+      <div class="card">
+        <p>
+          If downloads/images fail on the website, it’s almost always a path mismatch:
+          GitHub Pages is <strong>case-sensitive</strong>. Keep folder names lowercase
+          (<code>downloads/</code>, <code>images/</code>) and avoid spaces in filenames.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">© Omkar Mandve</div>
+      <div class="muted">README Preview</div>
+    </footer>
+  </main>
+</body>
+</html>
 
