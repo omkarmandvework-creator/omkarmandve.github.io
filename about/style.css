@@ -1,0 +1,335 @@
+/* =========================
+   Omkar Mandve — Global UI
+   Modern / Premium Dark Theme
+   ========================= */
+
+/* ---- CSS Reset (lightweight) ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ---- Theme Tokens ---- */
+:root {
+  --bg0: #0b1220;        /* page base */
+  --bg1: #0f1b2e;        /* section base */
+  --card: rgba(255, 255, 255, 0.06);
+  --card2: rgba(255, 255, 255, 0.08);
+
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.68);
+  --muted2: rgba(255, 255, 255, 0.55);
+
+  --border: rgba(255, 255, 255, 0.12);
+  --border2: rgba(255, 255, 255, 0.18);
+
+  --primary: #6ea8ff;
+  --primary2: #4f7dff;
+
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  --shadow2: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  --radius: 16px;
+  --radius2: 22px;
+
+  --maxw: 1080px;
+}
+
+/* ---- Base Typography ---- */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background:
+    radial-gradient(1200px 700px at 20% 0%, rgba(110, 168, 255, 0.16), transparent 60%),
+    radial-gradient(1000px 600px at 90% 10%, rgba(79, 125, 255, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--bg0), #070c14 70%);
+}
+
+/* ---- Layout Helpers ---- */
+.container {
+  width: min(var(--maxw), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+#main {
+  padding-bottom: 56px;
+}
+
+/* =========================
+   Header / Navbar
+   ========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 18, 32, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 16px;
+}
+
+.brand a {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+}
+
+.brand a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 46px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), rgba(110, 168, 255, 0.15));
+  opacity: 0.9;
+}
+
+/* Desktop menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-menu a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.nav-menu a:hover {
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Active page (aria-current="page") */
+.nav-menu a[aria-current="page"] {
+  color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(180deg, rgba(110, 168, 255, 0.18), rgba(110, 168, 255, 0.08));
+  border: 1px solid rgba(110, 168, 255, 0.22);
+  box-shadow: 0 10px 22px rgba(79, 125, 255, 0.12);
+}
+
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 10px 12px;
+  line-height: 1;
+}
+
+/* =========================
+   Page Header (About Me)
+   ========================= */
+.page-header {
+  position: relative;
+  padding: 64px 0 40px;
+  background:
+    radial-gradient(900px 420px at 40% 10%, rgba(110, 168, 255, 0.18), transparent 60%),
+    radial-gradient(900px 520px at 75% 0%, rgba(79, 125, 255, 0.14), transparent 55%),
+    linear-gradient(180deg, rgba(15, 27, 46, 0.65), rgba(11, 18, 32, 0));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.page-header .container {
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 54px);
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.page-header .lead {
+  margin: 14px auto 0;
+  max-width: 720px;
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: var(--muted);
+}
+
+/* subtle separator glow under header */
+.page-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transform: translateX(-50%);
+  width: min(760px, 90%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(110, 168, 255, 0.45), transparent);
+  opacity: 0.7;
+}
+
+/* =========================
+   About Content (Readable Card)
+   ========================= */
+.about-content {
+  padding: 36px 0 10px;
+}
+
+.about-content .container {
+  max-width: 920px;
+}
+
+.about-content .container > p {
+  margin: 0 0 18px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 17px;
+}
+
+/* Wrap content in a premium panel effect */
+.about-content .container {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.035));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius2);
+  padding: 28px 26px;
+  box-shadow: var(--shadow2);
+}
+
+/* Improve paragraph rhythm */
+.about-content .container > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Optional: highlight key phrases using <strong> */
+.about-content strong {
+  color: rgba(255, 255, 255, 0.96);
+  font-weight: 800;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(11, 18, 32, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.site-footer .container {
+  padding: 18px 0;
+  text-align: center;
+  color: var(--muted2);
+  font-size: 14px;
+}
+
+/* =========================
+   Responsive (Mobile)
+   ========================= */
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    position: absolute;
+    right: 24px;
+    top: 64px;
+    width: min(360px, calc(100% - 48px));
+    display: none; /* toggled by JS */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 10px;
+    border-radius: var(--radius);
+    background: rgba(11, 18, 32, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: var(--shadow);
+  }
+
+  /* This class should be added/removed by your script.js */
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 14px;
+  }
+
+  .page-header {
+    padding: 52px 0 34px;
+  }
+
+  .about-content .container {
+    padding: 22px 18px;
+  }
+}
+
+/* =========================
+   Accessibility: focus styles
+   ========================= */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(110, 168, 255, 0.55);
+  outline-offset: 2px;
+  border-radius: 12px;
+}

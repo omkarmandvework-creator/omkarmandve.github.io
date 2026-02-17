@@ -214,7 +214,13 @@ body {
         grid-template-columns: 1fr;
     }
 }
-
+.experience-detail {
+    li {
+        a{
+            color:white;
+        }
+    }
+}
 /* Blog post content styles */
 .blog-post h2,
 .project-detail h2,

@@ -1,86 +1,460 @@
 <!DOCTYPE html>
 <!--
-    Project page for the ERP CRP & Fit‑Gap Playbook. Details the scope,
-    approach and results of leading Conference Room Pilot sessions and
-    fit‑gap analysis for Oracle ERP implementations.
+  Project page: Oracle ERP Modules CRP & Fit-Gap Playbook (Tabbed by module)
+  Tabs: GL, Tax, AP, AR, CE, Expenses, Fixed Assets
 -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ERP CRP & Fit Gap Playbook project – Oracle ERP implementation methodology by Omkar Mandve." />
-    <title>ERP CRP &amp; Fit‑Gap Playbook | Omkar Mandve</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
-    <script defer src="../../assets/js/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oracle ERP CRP & Fit-Gap Playbook – module-wise CRP approach and artifacts by Omkar Mandve." />
+  <title>ERP CRP &amp; Fit-Gap Playbook | Omkar Mandve</title>
+
+  <!-- Global site stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <!-- Page-specific stylesheet -->
+  <link rel="stylesheet" href="./project.css" />
+
+  <script defer src="../../assets/js/script.js"></script>
 </head>
+
 <body>
-    <header class="site-header">
-        <nav class="navbar container">
-            <div class="brand"><a href="../../index.html">Omkar&nbsp;Mandve</a></div>
-            <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-            <ul class="nav-menu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../index.html" aria-current="page">Projects</a></li>
-                <li><a href="../../experience/index.html">Experience</a></li>
-                <li><a href="../../blog/index.html">Blog</a></li>
-                <li><a href="../../skills/index.html">Skills</a></li>
-                <li><a href="../../about/index.html">About</a></li>
-                <li><a href="../../contact/index.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main">
-        <section class="page-header">
-            <div class="container">
-                <h1>ERP CRP &amp; Fit‑Gap Playbook</h1>
-                <p class="lead">Structured CRP sessions and gap documentation for clean ERP deployments.</p>
+  <header class="site-header">
+    <nav class="navbar container">
+      <div class="brand"><a href="../../index.html">Omkar&nbsp;Mandve</a></div>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../index.html" aria-current="page">Projects</a></li>
+        <li><a href="../../experience/index.html">Experience</a></li>
+        <li><a href="../../blog/index.html">Blog</a></li>
+        <li><a href="../../skills/index.html">Skills</a></li>
+        <li><a href="../../about/index.html">About</a></li>
+        <li><a href="../../contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>ERP CRP &amp; Fit-Gap Playbook</h1>
+        <p class="lead">Module-wise CRP execution, issue triage, and fit-gap documentation for clean ERP deployments.</p>
+
+        <div class="meta-row">
+          <span class="chip">Oracle ERP</span>
+          <span class="chip">CRP / Fit-Gap</span>
+          <span class="chip">Panaya</span>
+          <span class="chip">Tax • CE • Expenses</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview + Sidebar -->
+    <section class="project-detail">
+      <div class="container two-col">
+        <div>
+          <h2>Project Overview</h2>
+          <p>
+            This playbook standardizes how I plan and run Conference Room Pilot (CRP) sessions across core Oracle ERP
+            modules, capture gaps and defects, and convert findings into configuration updates and UAT-ready outcomes.
+          </p>
+
+          <div class="info-cards">
+            <article class="info-card">
+              <h3>Scope</h3>
+              <p>
+                End-to-end CRP preparation, workshop facilitation, gap capture, defect triage, and remediation tracking
+                across Finance &amp; Compliance modules.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Approach</h3>
+              <p>
+                Structured agendas + scripts + data sets, scenario walk-throughs with business SMEs, fit-gap classification,
+                and prioritized closure aligned to release and cutover readiness.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Outcome</h3>
+              <p>
+                Reduced rework, earlier issue discovery, aligned stakeholders, and higher confidence in go-live readiness
+                through repeatable module-level governance.
+              </p>
+            </article>
+          </div>
+
+          <h2 class="mt-lg">Module Tabs</h2>
+          <p class="muted">
+            Each tab below summarizes CRP focus areas, typical gaps, and the artifacts produced for that module.
+          </p>
+
+          <!-- Tabs (CSS-only using radio buttons) -->
+          <section class="tabs" aria-label="Oracle ERP Modules">
+            <!-- Radios -->
+            <input class="tab-radio" type="radio" name="moduleTabs" id="tab-gl" checked>
+            <input class="tab-radio" type="radio" name="moduleTabs" id="tab-tax">
+            <input class="tab-radio" type="radio" name="moduleTabs" id="tab-ap">
+            <input class="tab-radio" type="radio" name="moduleTabs" id="tab-ar">
+            <input class="tab-radio" type="radio" name="moduleTabs" id="tab-ce">
+            <input class="tab-radio" type="radio" name="moduleTabs" id="tab-exp">
+            <input class="tab-radio" type="radio" name="moduleTabs" id="tab-fa">
+
+            <!-- Tab headers -->
+            <div class="tab-list" role="tablist" aria-label="Modules">
+              <label class="tab" for="tab-gl" role="tab" aria-controls="panel-gl">GL</label>
+              <label class="tab" for="tab-tax" role="tab" aria-controls="panel-tax">Tax</label>
+              <label class="tab" for="tab-ap" role="tab" aria-controls="panel-ap">AP</label>
+              <label class="tab" for="tab-ar" role="tab" aria-controls="panel-ar">AR</label>
+              <label class="tab" for="tab-ce" role="tab" aria-controls="panel-ce">CE</label>
+              <label class="tab" for="tab-exp" role="tab" aria-controls="panel-exp">Expenses</label>
+              <label class="tab" for="tab-fa" role="tab" aria-controls="panel-fa">FA</label>
             </div>
-        </section>
-        <section class="project-detail">
-            <div class="container two-col">
-                <div>
-                    <h2>Scope</h2>
+
+            <!-- Panels -->
+            <div class="tab-panels">
+              <!-- GL -->
+              <article class="tab-panel" id="panel-gl" role="tabpanel" aria-label="General Ledger">
+                <div class="panel-grid">
+                  <div>
+                    <h3>General Ledger (GL)</h3>
                     <p>
-                        For each Oracle ERP implementation, the Conference Room Pilot (CRP)
-                        sessions validate business processes using prototype systems. My
-                        playbook covers planning, execution, issue capture and fit‑gap
-                        resolution.
+                      Validate Chart of Accounts structure, ledgers, calendars, journals, allocations, and financial reporting flow.
                     </p>
-                    <h2>Approach</h2>
-                    <p>
-                        I designed session agendas, test scripts and data sets. During
-                        CRP I facilitated workshops, documented gaps, triaged defects and
-                        prioritized remediation. Fit‑gap analysis results were fed into
-                        configuration updates and user acceptance testing.
-                    </p>
-                    <h2>Outcome</h2>
-                    <p>
-                        The structured process minimized rework and improved go‑live
-                        readiness. Stakeholders were aligned on scope, key issues were
-                        resolved early and user confidence increased.
-                    </p>
+
+                    <h4>CRP Focus</h4>
+                    <ul class="bullets">
+                      <li>Ledger setup, accounting calendar, currencies &amp; rates</li>
+                      <li>Journal entry lifecycle: create → approve → post → reverse</li>
+                      <li>Intercompany &amp; balancing (where applicable)</li>
+                      <li>Period close steps, reconciliations, and audit evidence</li>
+                    </ul>
+
+                    <h4>Typical Fit-Gaps</h4>
+                    <ul class="bullets">
+                      <li>COA segment governance &amp; reporting granularity</li>
+                      <li>Approval rules, journal sources/categories mismatches</li>
+                      <li>Close dependencies across subledgers</li>
+                    </ul>
+                  </div>
+
+                  <div class="panel-side">
+                    <h4>Artifacts</h4>
+                    <ul class="link-list">
+                      <li><a class="external" href="#">GL CRP script (journals + close)</a></li>
+                      <li><a class="external" href="#">COA validation checklist</a></li>
+                      <li><a class="external" href="#">GL Fit-Gap log template</a></li>
+                    </ul>
+
+                    <h4>KPIs</h4>
+                    <ul class="mini-list">
+                      <li>Journal cycle time</li>
+                      <li>Close readiness score</li>
+                      <li>Open gaps aging</li>
+                    </ul>
+                  </div>
                 </div>
-                <aside>
-                    <h3>Responsibilities</h3>
-                    <ul>
-                        <li>Tax, Expenses &amp; Cash Management modules</li>
-                        <li>Fit‑gap documentation &amp; prioritization</li>
-                        <li>Issue triage in Panaya</li>
+              </article>
+
+              <!-- Tax -->
+              <article class="tab-panel" id="panel-tax" role="tabpanel" aria-label="Tax">
+                <div class="panel-grid">
+                  <div>
+                    <h3>Tax</h3>
+                    <p>
+                      Validate tax determination rules, regimes/rates, reporting requirements, and tax accounting impact across AP/AR.
+                    </p>
+
+                    <h4>CRP Focus</h4>
+                    <ul class="bullets">
+                      <li>Tax regimes, statuses, rates, jurisdiction logic</li>
+                      <li>Place of supply / ship-to bill-to logic (as applicable)</li>
+                      <li>Input vs output tax accounting and recoverability</li>
+                      <li>Tax invoices, rounding rules, exemptions, reverse charge</li>
                     </ul>
-                    <h3>Artifacts</h3>
-                    <ul>
-                        <li><a href="#" class="external">Playbook document</a></li>
-                        <li><a href="#" class="external">CRP session template</a></li>
+
+                    <h4>Typical Fit-Gaps</h4>
+                    <ul class="bullets">
+                      <li>Business rule exceptions not covered in standard setup</li>
+                      <li>Tax reporting gaps (registers, reconciliation needs)</li>
+                      <li>Edge cases: credit memos, advances, mixed supplies</li>
                     </ul>
-                </aside>
+                  </div>
+
+                  <div class="panel-side">
+                    <h4>Artifacts</h4>
+                    <ul class="link-list">
+                      <li><a class="external" href="#">Tax configuration matrix</a></li>
+                      <li><a class="external" href="#">Tax scenarios &amp; expected results</a></li>
+                      <li><a class="external" href="#">Tax Fit-Gap log + evidence pack</a></li>
+                    </ul>
+
+                    <h4>Tools</h4>
+                    <ul class="mini-list">
+                      <li>Oracle Tax</li>
+                      <li>Subledger Accounting (SLA)</li>
+                      <li>Panaya triage</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- AP -->
+              <article class="tab-panel" id="panel-ap" role="tabpanel" aria-label="Accounts Payable">
+                <div class="panel-grid">
+                  <div>
+                    <h3>Accounts Payable (AP)</h3>
+                    <p>
+                      Validate supplier lifecycle, invoices, approvals, payments, withholding, and accounting outcomes.
+                    </p>
+
+                    <h4>CRP Focus</h4>
+                    <ul class="bullets">
+                      <li>Supplier onboarding controls, payment methods, bank details</li>
+                      <li>Invoice capture: PO vs non-PO, matching, holds</li>
+                      <li>Approval workflows, payment batches, bank file outputs</li>
+                      <li>Tax/withholding handling and accounting validation</li>
+                    </ul>
+
+                    <h4>Typical Fit-Gaps</h4>
+                    <ul class="bullets">
+                      <li>Approval hierarchies vs business delegations</li>
+                      <li>Invoice exceptions / holds policies not aligned</li>
+                      <li>Payment file formats and bank connectivity constraints</li>
+                    </ul>
+                  </div>
+
+                  <div class="panel-side">
+                    <h4>Artifacts</h4>
+                    <ul class="link-list">
+                      <li><a class="external" href="#">AP CRP script (invoice→payment)</a></li>
+                      <li><a class="external" href="#">Payment run checklist</a></li>
+                      <li><a class="external" href="#">AP Fit-Gap + defect register</a></li>
+                    </ul>
+
+                    <h4>Controls</h4>
+                    <ul class="mini-list">
+                      <li>Maker-checker approvals</li>
+                      <li>Duplicate invoice prevention</li>
+                      <li>Audit trail readiness</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- AR -->
+              <article class="tab-panel" id="panel-ar" role="tabpanel" aria-label="Accounts Receivable">
+                <div class="panel-grid">
+                  <div>
+                    <h3>Accounts Receivable (AR)</h3>
+                    <p>
+                      Validate billing, receipts, credit management, revenue accounting touchpoints, and customer statements.
+                    </p>
+
+                    <h4>CRP Focus</h4>
+                    <ul class="bullets">
+                      <li>Customer setup, payment terms, tax profiles</li>
+                      <li>Invoice creation, credit memos, adjustments</li>
+                      <li>Receipts: lockbox/manual, application, reversals</li>
+                      <li>Customer aging, statements, and dispute handling</li>
+                    </ul>
+
+                    <h4>Typical Fit-Gaps</h4>
+                    <ul class="bullets">
+                      <li>Receipt matching rules and reference quality</li>
+                      <li>Write-off/adjustment approvals</li>
+                      <li>Reporting needs for collections and reconciliation</li>
+                    </ul>
+                  </div>
+
+                  <div class="panel-side">
+                    <h4>Artifacts</h4>
+                    <ul class="link-list">
+                      <li><a class="external" href="#">AR CRP script (invoice→receipt)</a></li>
+                      <li><a class="external" href="#">Receipts matching scenarios</a></li>
+                      <li><a class="external" href="#">AR Fit-Gap log template</a></li>
+                    </ul>
+
+                    <h4>KPIs</h4>
+                    <ul class="mini-list">
+                      <li>DSO / collections</li>
+                      <li>Unapplied receipts</li>
+                      <li>Aging accuracy</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- CE -->
+              <article class="tab-panel" id="panel-ce" role="tabpanel" aria-label="Cash Management">
+                <div class="panel-grid">
+                  <div>
+                    <h3>Cash Management (CE)</h3>
+                    <p>
+                      Validate bank accounts, statement imports, reconciliation rules, and cash positioning for finance control.
+                    </p>
+
+                    <h4>CRP Focus</h4>
+                    <ul class="bullets">
+                      <li>Bank accounts, formats, statement import/translation</li>
+                      <li>Auto/Manual reconciliation rules and exceptions</li>
+                      <li>Cash in transit visibility (AR/AP clearing timing)</li>
+                      <li>Bank charges, interest, and accounting impact</li>
+                    </ul>
+
+                    <h4>Typical Fit-Gaps</h4>
+                    <ul class="bullets">
+                      <li>Bank statement format constraints and data quality</li>
+                      <li>Matching rules tuning for high-volume transactions</li>
+                      <li>Reconciliation reporting expectations</li>
+                    </ul>
+                  </div>
+
+                  <div class="panel-side">
+                    <h4>Artifacts</h4>
+                    <ul class="link-list">
+                      <li><a class="external" href="#">CE reconciliation playbook</a></li>
+                      <li><a class="external" href="#">Auto-match rule catalogue</a></li>
+                      <li><a class="external" href="#">CE Fit-Gap + defect tracker</a></li>
+                    </ul>
+
+                    <h4>Governance</h4>
+                    <ul class="mini-list">
+                      <li>Daily recon cadence</li>
+                      <li>Exception SLA</li>
+                      <li>Audit evidence pack</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Expenses -->
+              <article class="tab-panel" id="panel-exp" role="tabpanel" aria-label="Expenses">
+                <div class="panel-grid">
+                  <div>
+                    <h3>Expenses (Exp)</h3>
+                    <p>
+                      Validate travel &amp; expense policy, approvals, corporate card integration, reimbursements, and accounting.
+                    </p>
+
+                    <h4>CRP Focus</h4>
+                    <ul class="bullets">
+                      <li>Spend authorization, cash advances, policy enforcement</li>
+                      <li>Expense report creation, approvals, audit rules</li>
+                      <li>Reimbursements: payment method, timing, exceptions</li>
+                      <li>Corporate card feeds and reconciliation</li>
+                    </ul>
+
+                    <h4>Typical Fit-Gaps</h4>
+                    <ul class="bullets">
+                      <li>Policy edge cases (per diem, exceptions, caps)</li>
+                      <li>Approval delegation and escalations</li>
+                      <li>Tax handling on expenses and compliance evidence</li>
+                    </ul>
+                  </div>
+
+                  <div class="panel-side">
+                    <h4>Artifacts</h4>
+                    <ul class="link-list">
+                      <li><a class="external" href="#">Expenses process flows + scripts</a></li>
+                      <li><a class="external" href="#">Policy-to-system mapping sheet</a></li>
+                      <li><a class="external" href="#">Exp Fit-Gap + UAT scenarios</a></li>
+                    </ul>
+
+                    <h4>KPIs</h4>
+                    <ul class="mini-list">
+                      <li>Approval cycle time</li>
+                      <li>Audit exception rate</li>
+                      <li>Reimbursement SLA</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Fixed Assets -->
+              <article class="tab-panel" id="panel-fa" role="tabpanel" aria-label="Fixed Assets">
+                <div class="panel-grid">
+                  <div>
+                    <h3>Fixed Assets (FA)</h3>
+                    <p>
+                      Validate asset lifecycle, capitalization, depreciation rules, retirements, and reporting across books.
+                    </p>
+
+                    <h4>CRP Focus</h4>
+                    <ul class="bullets">
+                      <li>Asset categories, books (corporate/IFRS/tax), conventions</li>
+                      <li>Additions: manual, mass additions from AP, CIP flow</li>
+                      <li>Depreciation runs, revaluations, impairments, transfers</li>
+                      <li>Retirements/disposals and accounting validation</li>
+                    </ul>
+
+                    <h4>Typical Fit-Gaps</h4>
+                    <ul class="bullets">
+                      <li>Multi-book reporting alignment and localized rules</li>
+                      <li>CIP-to-asset controls and evidence requirements</li>
+                      <li>Depreciation policy exceptions and cutover data needs</li>
+                    </ul>
+                  </div>
+
+                  <div class="panel-side">
+                    <h4>Artifacts</h4>
+                    <ul class="link-list">
+                      <li><a class="external" href="#">FA CRP script (lifecycle)</a></li>
+                      <li><a class="external" href="#">Multi-book rule matrix</a></li>
+                      <li><a class="external" href="#">FA Fit-Gap + cutover checklist</a></li>
+                    </ul>
+
+                    <h4>Controls</h4>
+                    <ul class="mini-list">
+                      <li>Capitalization approvals</li>
+                      <li>Book close governance</li>
+                      <li>Audit-ready reporting</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
             </div>
-        </section>
-        <section class="back-link container">
-            <a class="btn" href="../index.html">Back to Projects</a>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container"><p>&copy; <span id="year"></span> Omkar Mandve.</p></div>
-    </footer>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="project-aside">
+          <h3>Responsibilities</h3>
+          <ul>
+            <li>CRP planning &amp; facilitation (Finance modules)</li>
+            <li>Fit-gap documentation &amp; prioritization</li>
+            <li>Issue triage and defect lifecycle in Panaya</li>
+            <li>Stakeholder alignment &amp; closure governance</li>
+          </ul>
+
+          <h3>Artifacts</h3>
+          <ul>
+            <li><a href="#" class="external">Master Playbook Document</a></li>
+            <li><a href="#" class="external">CRP Session Template</a></li>
+            <li><a href="#" class="external">Fit-Gap Log (Excel)</a></li>
+            <li><a href="#" class="external">UAT Scenario Pack</a></li>
+          </ul>
+
+          <div class="aside-box">
+            <h4>Quick Notes</h4>
+            <p class="muted">
+              Replace <code>#</code> links with your actual file paths (PDF/Excel) once uploaded to your repo.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="back-link container">
+      <a class="btn" href="../index.html">Back to Projects</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Omkar Mandve.</p>
+    </div>
+  </footer>
 </body>
 </html>

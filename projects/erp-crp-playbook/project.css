@@ -1,0 +1,374 @@
+/* project.css
+   Page-specific styles for the ERP CRP & Fit-Gap Playbook tabbed modules layout.
+   Works alongside ../../assets/css/style.css
+   Dark theme with modern design patterns
+*/
+
+:root{
+  --panel-bg: rgba(22, 39, 62, 0.65);
+  --panel-bg-hover: rgba(22, 39, 62, 0.8);
+  --panel-border: rgba(96, 165, 250, 0.2);
+  --panel-border-hover: rgba(96, 165, 250, 0.4);
+  --accent-blue: #60a5fa;
+  --accent-blue-dark: #3b82f6;
+  --accent-green: #34d399;
+  --accent-purple: #a78bfa;
+  --text-light: #e5e7eb;
+  --text-muted: #9ca3af;
+  --bg-dark: rgba(11, 15, 23, 0.6);
+  --soft-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  --soft-shadow-2: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --radius-lg: 20px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+}
+
+/* Small utility helpers */
+.mt-lg { margin-top: 2rem; }
+.muted { color: var(--text-muted); opacity: 1; }
+code { 
+  padding: 0.25rem 0.5rem; 
+  border-radius: 8px; 
+  border: 1px solid var(--panel-border);
+  background: rgba(96, 165, 250, 0.1); 
+  color: var(--accent-blue);
+  font-weight: 500;
+}
+
+/* Header chips */
+.meta-row{
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.chip{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--panel-border-hover);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(52, 211, 153, 0.1));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-light);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+.chip:hover{
+  border-color: var(--accent-blue);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.25), rgba(52, 211, 153, 0.15));
+  box-shadow: 0 6px 16px rgba(96, 165, 250, 0.3);
+}
+
+/* Section spacing (safe if global already handles it) */
+.project-detail{
+  padding: 2rem 0 2.25rem;
+}
+
+/* Overview cards */
+.info-cards{
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.info-card{
+  border: 1.5px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(22, 39, 62, 0.8), rgba(15, 23, 42, 0.5));
+  box-shadow: var(--soft-shadow-2);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.info-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.1), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+.info-card:hover{
+  border-color: var(--panel-border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(96, 165, 250, 0.2);
+}
+.info-card:hover::before{
+  left: 100%;
+}
+.info-card h3{
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.info-card p{
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Sidebar styling */
+.project-aside{
+  border: 1.5px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(22, 39, 62, 0.7), rgba(15, 23, 42, 0.5));
+  box-shadow: var(--soft-shadow);
+  padding: 1.5rem;
+  position: sticky;
+  top: 6rem;
+  height: fit-content;
+  backdrop-filter: blur(10px);
+}
+.project-aside h3{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+.project-aside ul{
+  margin: 0 0 1.2rem 1.3rem;
+  padding: 0;
+  list-style: disc;
+}
+.project-aside li{
+  margin: 0.5rem 0;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+.aside-box{
+  margin-top: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1.5px dashed var(--panel-border);
+  background: rgba(96, 165, 250, 0.08);
+  padding: 1.1rem;
+  backdrop-filter: blur(8px);
+}
+.aside-box h4{
+  margin: 0 0 0.6rem 0;
+  color: var(--accent-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.aside-box p{
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Tabs wrapper */
+.tabs{
+  margin-top: 1.5rem;
+  border: 1.5px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(22, 39, 62, 0.6), rgba(15, 23, 42, 0.4));
+  box-shadow: var(--soft-shadow);
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+}
+
+/* Hide radio inputs */
+.tab-radio{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Tab list */
+.tab-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 1rem 1.1rem 0.8rem;
+  border-bottom: 1.5px solid var(--panel-border);
+  background: rgba(11, 15, 23, 0.4);
+}
+.tab{
+  cursor: pointer;
+  user-select: none;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--panel-border);
+  background: rgba(22, 39, 62, 0.6);
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+.tab:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.15);
+  background: rgba(22, 39, 62, 0.8);
+  border-color: rgba(96, 165, 250, 0.3);
+  color: var(--accent-blue);
+}
+
+/* Panels */
+.tab-panels{
+  padding: 1.2rem;
+}
+.tab-panel{
+  display: none;
+  border: 1.5px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(22, 39, 62, 0.8), rgba(15, 23, 42, 0.5));
+  box-shadow: var(--soft-shadow-2);
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active tab + panel (CSS-only) */
+#tab-gl:checked ~ .tab-list label[for="tab-gl"],
+#tab-tax:checked ~ .tab-list label[for="tab-tax"],
+#tab-ap:checked ~ .tab-list label[for="tab-ap"],
+#tab-ar:checked ~ .tab-list label[for="tab-ar"],
+#tab-ce:checked ~ .tab-list label[for="tab-ce"],
+#tab-exp:checked ~ .tab-list label[for="tab-exp"],
+#tab-fa:checked ~ .tab-list label[for="tab-fa"]{
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.25), rgba(52, 211, 153, 0.15));
+  border-color: var(--accent-blue);
+  color: var(--text-light);
+  box-shadow: 0 8px 24px rgba(96, 165, 250, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#tab-gl:checked ~ .tab-panels #panel-gl,
+#tab-tax:checked ~ .tab-panels #panel-tax,
+#tab-ap:checked ~ .tab-panels #panel-ap,
+#tab-ar:checked ~ .tab-panels #panel-ar,
+#tab-ce:checked ~ .tab-panels #panel-ce,
+#tab-exp:checked ~ .tab-panels #panel-exp,
+#tab-fa:checked ~ .tab-panels #panel-fa{
+  display: block;
+}
+
+/* Panel layout */
+.panel-grid{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.panel-grid h3{
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  color: var(--accent-blue);
+}
+.panel-grid h4{
+  margin: 1.2rem 0 0.6rem 0;
+  font-size: 1.05rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+.panel-side{
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--panel-border);
+  background: rgba(96, 165, 250, 0.08);
+  padding: 1.2rem;
+  backdrop-filter: blur(8px);
+}
+.panel-side h4{
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+  color: var(--accent-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Lists */
+.bullets{
+  margin: 0.5rem 0 1rem 1.3rem;
+  padding: 0;
+  list-style: disc;
+}
+.bullets li{
+  margin: 0.5rem 0;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+.link-list, .mini-list{
+  margin: 0.5rem 0 1rem 1.3rem;
+  padding: 0;
+  list-style: none;
+}
+.link-list li, .mini-list li{
+  margin: 0.6rem 0;
+  line-height: 1.7;
+}
+
+/* Make external links look clean */
+a.external{
+  text-decoration: none;
+  color: var(--accent-blue);
+  border-bottom: 1px dashed var(--accent-blue);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+a.external:hover{
+  color: var(--accent-green);
+  border-bottom: 1px solid var(--accent-green);
+  text-decoration: none;
+}
+
+
+/* Section styling */
+.project-detail{
+  padding: 2.5rem 0;
+}
+.project-detail h2{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+.project-detail p{
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .info-cards{
+    grid-template-columns: 1fr;
+  }
+  .project-aside{
+    position: static;
+    margin-top: 1.5rem;
+  }
+  .panel-grid{
+    grid-template-columns: 1fr;
+  }
+  .tab-list{
+    padding: 0.85rem;
+  }
+  .tab-panels{
+    padding: 0.85rem;
+  }
+}
