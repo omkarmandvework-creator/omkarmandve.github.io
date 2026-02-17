@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCF Automated Engine - Project</title>
     <link rel="stylesheet" href="project.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -16,9 +18,10 @@
         <section class="project-description">
             <h2>About This Project</h2>
             <p>
-                The DCF Automated Engine is a comprehensive Python-based financial modeling tool that automates 
-                the Discounted Cash Flow (DCF) valuation process. This project provides an end-to-end solution 
-                for valuing companies using free cash flow projections, terminal value calculations, and sensitivity analysis.
+                The DCF Automated Engine is a comprehensive Python-based financial modeling tool that automates
+                the Discounted Cash Flow (DCF) valuation process. This project provides an end-to-end solution
+                for valuing companies using free cash flow projections, terminal value calculations, and sensitivity
+                analysis.
             </p>
         </section>
 
@@ -29,13 +32,17 @@
                     <div class="download-icon">📓</div>
                     <h3>Python Model</h3>
                     <p>Jupyter Notebook with complete DCF implementation</p>
-                    <a href="DCF_python_Model.ipynb" download class="download-btn">Download DCF_python_Model.ipynb</a>
+                    <a href="downloads/DCF_python_Model.ipynb" class="download-btn" download>
+                        Download DCF_python_Model.ipynb
+                    </a>
                 </div>
                 <div class="download-item">
                     <div class="download-icon">📊</div>
                     <h3>Excel Model</h3>
                     <p>Pre-configured Excel model with NVDA example</p>
-                    <a href="nvda_dcf_python_model.xlsx" download class="download-btn">Download nvda_dcf_python_model.xlsx</a>
+                    <a href="downloads/nvda_dcf_python_model.xlsx" class="download-btn" download>
+                        Download nvda_dcf_python_model.xlsx
+                    </a>
                 </div>
             </div>
         </section>
@@ -44,27 +51,42 @@
             <h2>Project Visualizations</h2>
             <div class="image-grid">
                 <div class="image-item">
-                    <img src="DCF_Assumtions.png" alt="DCF Assumptions" onclick="openModal('DCF_Assumtions.png')">
+                    <a href="images/DCF_Assumtions.png" class="download-btn" download>
+                        Download DCF Assumptions
+                    </a>
                     <p>DCF Assumptions</p>
                 </div>
                 <div class="image-item">
-                    <img src="DCF_Valuation.png" alt="DCF Valuation" onclick="openModal('DCF_Valuation.png')">
+                    <a href="images/DCF_Valuation.png" class="download-btn" download>
+                        Download DCF Valuation
+                    </a>
                     <p>DCF Valuation</p>
                 </div>
                 <div class="image-item">
-                    <img src="FCF.png" alt="Free Cash Flow" onclick="openModal('FCF.png')">
+
+                    <a href="images/FCF.png" class="download-btn" download>
+                        Download Free Cash Flow
+                    </a>
                     <p>Free Cash Flow</p>
                 </div>
                 <div class="image-item">
-                    <img src="Forecast Free cash flow.png" alt="Forecast Free Cash Flow" onclick="openModal('Forecast Free cash flow.png')">
+
+                    <a href="images/Forecast Free cash flow.png" class="download-btn" download>
+                        Download Forecast Free Cash Flow
+                    </a>
                     <p>Forecast Free Cash Flow</p>
                 </div>
                 <div class="image-item">
-                    <img src="Historical free cash flow (1).png" alt="Historical Free Cash Flow" onclick="openModal('Historical free cash flow (1).png')">
+
+                    <a href="images/Historical free cash flow (1).png" class="download-btn" download>
+                        Download Historical Free Cash Flow
+                    </a>
                     <p>Historical Free Cash Flow</p>
                 </div>
                 <div class="image-item">
-                    <img src="Sensitivity Analysis.png" alt="Sensitivity Analysis" onclick="openModal('Sensitivity Analysis.png')">
+                    <a href="images/Sensitivity Analysis.png" class="download-btn" download>
+                        Download Sensitivity Analysis
+                    </a>
                     <p>Sensitivity Analysis</p>
                 </div>
             </div>
@@ -109,11 +131,12 @@
         }
 
         // Close modal on Escape key
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
                 closeModal();
             }
         });
     </script>
 </body>
+
 </html>
