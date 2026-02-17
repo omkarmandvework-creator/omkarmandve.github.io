@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <!--
-    Company detail page for Infosys. Use this template to outline your role,
-    responsibilities, modules and achievements at each company. Replace
-    placeholder text with your actual experience.
+  Infosys Experience detail page
+  UI aligned with modern project pages (cards, chips, hero, two-column layout).
 -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Infosys experience details for Omkar Mandve – Oracle ERP Finance consultant." />
+
     <title>Infosys | Experience | Omkar Mandve</title>
+
+    <!-- Global site styles -->
     <link rel="stylesheet" href="../../assets/css/style.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="./experience.css" />
+
     <script defer src="../../assets/js/script.js"></script>
 </head>
+
 <body>
     <header class="site-header">
         <nav class="navbar container">
@@ -29,79 +36,300 @@
             </ul>
         </nav>
     </header>
+
     <main id="main">
-        <section class="page-header">
+        <!-- HERO -->
+        <section class="exp-hero">
             <div class="container">
-                <h1>Infosys – Financial Consultant</h1>
-                <p class="lead">Oracle ERP Finance implementations and testing leadership.</p>
+                <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
+                    <a href="../index.html">Experience</a>
+                    <span class="sep">/</span>
+                    <span aria-current="page">Infosys</span>
+                </nav>
+
+                <div class="exp-hero-grid">
+                    <div class="exp-hero-left">
+                        <h1>Infosys — Financial Consultant</h1>
+                        <p class="lead">
+                            Oracle ERP Finance implementations, CRP execution, testing governance, and analytics
+                            automation.
+                        </p>
+
+                        <div class="exp-chips" aria-label="Key tags">
+                            <span class="chip">Oracle Cloud ERP</span>
+                            <span class="chip">CRP / Fit-Gap</span>
+                            <span class="chip">Panaya Testing</span>
+                            <span class="chip">FP&amp;A / Valuation</span>
+                            <span class="chip">Python Automation</span>
+                            <span class="chip">n8n Workflows</span>
+                        </div>
+                    </div>
+
+                    <div class="exp-hero-right">
+                        <div class="kpi-grid" aria-label="Highlights">
+                            <div class="kpi">
+                                <div class="kpi-label">Team</div>
+                                <div class="kpi-value">6</div>
+                                <div class="kpi-note">2 consultants • 4 devs</div>
+                            </div>
+                            <div class="kpi">
+                                <div class="kpi-label">Focus</div>
+                                <div class="kpi-value">CRP → UAT</div>
+                                <div class="kpi-note">readiness + closure</div>
+                            </div>
+                            <div class="kpi">
+                                <div class="kpi-label">Automation</div>
+                                <div class="kpi-value">Python + n8n</div>
+                                <div class="kpi-note">repeatable outputs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
-        <section class="experience-detail">
-            <div class="container two-col">
-                <div>
-                    <h2>Role &amp; Responsibilities</h2>
-                    <p>
-                        <li>Led end-to-end financial consulting engagements, managing a cross-functional team of 6 (2 consultants, 4 developers)
-                           and aligning delivery with Principal Consultant and Industry Principal on high-impact client solutions.</li>
-                        <li>Designed and executed advanced financial models including DCF, Comparable Company Analysis, VC, and Scorecard
-                          methods to evaluate public companies and startups across global markets.</li>
-                        <li>Owned Conference Room Pilot (CRP) execution, driving pilot planning, validation, stakeholder feedback, and readiness
-                          assessment to ensure seamless enterprise-level deployment.</li>
-                        <li>Developed revenue and free cash flow forecasting frameworks, incorporating historical trends, industry benchmarks,
-                          scenario analysis, and sensitivity testing to support strategic decision-making.</li>
-                        <li>Built Python-driven valuation and analytics pipelines, automating data extraction, validation, modeling, and reporting to
-                          enable scalable and repeatable equity valuation processes.</li>
-                        <li>Architected a Python-based automated DCF valuation agent, enabling rapid, standardized equity valuation across multiple
-                          geographies and sectors.</li>
-                        <li>Automated end-to-end financial workflows using n8n, significantly reducing manual intervention, improving data
-                          accuracy, and accelerating delivery of professional-grade Excel outputs.</li>
-                        <li>Integrated Oracle Financial modules (AR, AP, GL, Fixed Assets, Cash Management, Tax, and Expense Management) to
-                          streamline financial operations and enhance reporting efficiency.</li>
-                        <li>Collaborated with international clients, including UK-based Grupo Bimbo, delivering optimized financial processes,
-                          compliance assurance, and measurable improvements in operational efficiency.</li>
-                        <li>Delivered data-driven insights and executive-ready outputs, translating complex financial analysis into actionable
-                          recommendations that supported solution adoption, investment decisions, and client value creationt.</li>
-                    </p>
-                    <h2>Key Modules</h2>
-                    <ul>
-                        <li>General Ledger (GL)</li>
-                        <li>Tax </li>
-                        <li>Accounts Payable</li>
-                        <li>Accounts Receivable </li> 
-                        <li>Fixed Assets</li>
-                        <li>Cash Management</li>
-                        <li>Expenses</li>
-                    </ul>
-                    <h2>Achievements</h2>
-                    <ul>
-                        <li>Delivered global implementations for clients in UK, Barcel &amp; India</li>
-                        <li>Delivered enterprise-ready analytical solutions by successfully executing Conference Room Pilots (CRPs), defining pilot scope,
-                            validation metrics, and structured feedback loops—ensuring refined, deployment-ready solutions prior to full-scale rollout.</li>
-                        <li>Built a Python-based automated DCF valuation agent, enabling end-to-end financial data extraction, free cash flow forecasting,
-                            valuation (Gordon Growth & Exit Multiple), and generation of professional Excel outputs—significantly improving speed,
-                            accuracy, and scalability of equity valuations.</li>
-                        <li>Transformed valuation and reporting efficiency through automation, integrating data ingestion, model execution, Excel reporting,
-                             and alerts using n8n—reducing manual effort, enhancing consistency, and accelerating delivery timelines for financial analysis.</li>
-                        <li>Managed Panaya testing cycles with issue triage</li>
-                    </ul>
-                </div>
-                <aside>
-                    <h3>Projects at Infosys</h3>
-                    <ul>
-                        <li><a href="../../projects/erp-crp-playbook/index.html">DCF Valuation Engine (Python)</a></li>
-                        <li><a href="../../projects/erp-crp-playbook/index.html">Bimbo UK (Tax, Expense, Cash Management</a></li>
-                        <li><a href="../../projects/erp-crp-playbook/index.html"> Bimbo Barcel (GL, AP, AR, Tax)</a></li>
-                        <li><a href="../../projects/erp-crp-playbook/index.html"> Bimbo India (Tax, Expense))</a></li>
-                        <li><a href="../../projects/erp-crp-playbook/index.html"> Workflow Automation for Data Analysis & Content Publishing (n8n)</a></li>
-                        <li><a href="../../projects/blog-analytics-platform/index.html">Analytics &amp; Reporting Platform</a></li>
-                    </ul>
+
+        <!-- CONTENT -->
+        <section class="exp-section">
+            <div class="container exp-two-col">
+                <!-- LEFT: MAIN -->
+                <article class="exp-main">
+                    <section class="panel">
+                        <h2>Role Summary</h2>
+                        <p>
+                            I led finance consulting and delivery governance across Oracle ERP Finance implementations.
+                            My responsibilities spanned CRP execution, valuation modeling, automation, and testing
+                            governance to
+                            deliver enterprise-ready outcomes with strong stakeholder alignment.
+                        </p>
+
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h3>Delivery Leadership</h3>
+                                <p>
+                                    Led end-to-end engagements, coordinating with Principal Consultant and Industry
+                                    Principal to align scope,
+                                    execution, and stakeholder expectations.
+                                </p>
+                            </div>
+                            <div class="info-card">
+                                <h3>Valuation &amp; Forecasting</h3>
+                                <p>
+                                    Designed DCF, comps, VC, and scorecard models with FCF forecasting, scenario
+                                    planning, and sensitivity analysis.
+                                </p>
+                            </div>
+                            <div class="info-card">
+                                <h3>Automation &amp; Scale</h3>
+                                <p>
+                                    Built Python pipelines and n8n workflows to automate data validation, modeling runs,
+                                    reporting outputs, and alerts.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="panel">
+                        <h2>Key Responsibilities</h2>
+                        <ul class="bullets">
+                            <li>
+                                Led end-to-end financial consulting engagements, managing a cross-functional team of 6
+                                (2 consultants, 4 developers)
+                                and aligning delivery with Principal Consultant and Industry Principal.
+                            </li>
+                            <li>
+                                Designed and executed advanced financial models including DCF, Comparable Company
+                                Analysis, VC, and Scorecard
+                                methods to evaluate public companies and startups across global markets.
+                            </li>
+                            <li>
+                                Owned Conference Room Pilot (CRP) execution — planning, validation, stakeholder
+                                feedback, and readiness assessment
+                                to support enterprise-level deployment.
+                            </li>
+                            <li>
+                                Developed revenue and free cash flow forecasting frameworks using historical trends,
+                                benchmarks, scenario analysis,
+                                and sensitivity testing.
+                            </li>
+                            <li>
+                                Built Python-driven valuation and analytics pipelines, automating data extraction,
+                                validation, modeling, and reporting
+                                for scalable valuation workflows.
+                            </li>
+                            <li>
+                                Architected a Python-based automated DCF valuation agent to standardize valuation across
+                                geographies and sectors.
+                            </li>
+                            <li>
+                                Automated end-to-end financial workflows using n8n to reduce manual intervention and
+                                accelerate professional-grade
+                                Excel outputs.
+                            </li>
+                            <li>
+                                Integrated Oracle Financial modules (AR, AP, GL, Fixed Assets, Cash Management, Tax,
+                                Expenses) to streamline operations
+                                and enhance reporting efficiency.
+                            </li>
+                            <li>
+                                Collaborated with international clients including UK-based Grupo Bimbo, delivering
+                                optimized finance processes and compliance assurance.
+                            </li>
+                            <li>
+                                Delivered executive-ready insights by translating complex analysis into actionable
+                                recommendations supporting adoption and investment decisions.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="panel">
+                        <h2>Oracle Modules Covered</h2>
+                        <div class="pill-grid" aria-label="Modules">
+                            <span class="pill">General Ledger (GL)</span>
+                            <span class="pill">Tax</span>
+                            <span class="pill">Accounts Payable (AP)</span>
+                            <span class="pill">Accounts Receivable (AR)</span>
+                            <span class="pill">Fixed Assets</span>
+                            <span class="pill">Cash Management</span>
+                            <span class="pill">Expenses</span>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="grid-2">
+                            <div class="mini-panel">
+                                <h3>Process &amp; Controls</h3>
+                                <ul class="mini-list">
+                                    <li>CRP scenario walkthroughs aligned to policies and compliance</li>
+                                    <li>Approval controls and exception handling</li>
+                                    <li>Close and reconciliation readiness support</li>
+                                </ul>
+                            </div>
+                            <div class="mini-panel">
+                                <h3>Testing &amp; Quality</h3>
+                                <ul class="mini-list">
+                                    <li>Defect triage, prioritization, and closure governance</li>
+                                    <li>Traceability from CRP gaps → UAT outcomes</li>
+                                    <li>Panaya execution cadence with status visibility</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="panel">
+                        <h2>Impact &amp; Achievements</h2>
+
+                        <div class="impact-grid">
+                            <div class="impact-card">
+                                <div class="impact-title">Global Implementations</div>
+                                <p>Delivered implementations for clients across UK and India workstreams.</p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-title">CRP → Deployment Readiness</div>
+                                <p>
+                                    Executed CRPs with defined scope, validation metrics, and structured feedback loops
+                                    to ensure deployment-ready outputs.
+                                </p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-title">Automated DCF Valuation Agent</div>
+                                <p>
+                                    Built an end-to-end DCF automation: data extraction, FCF forecasting, valuation
+                                    (Gordon Growth & Exit Multiple),
+                                    and professional Excel generation.
+                                </p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-title">Workflow Automation (n8n)</div>
+                                <p>
+                                    Integrated ingestion → model execution → Excel reporting → alerts, improving
+                                    consistency and reducing manual effort.
+                                </p>
+                            </div>
+
+                            <div class="impact-card">
+                                <div class="impact-title">Testing Governance</div>
+                                <p>Managed Panaya testing cycles with structured triage and issue closure tracking.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="panel exp-actions">
+                        <a class="btn" href="../index.html">Back to Experience</a>
+                        <a class="btn btn-secondary" href="../../projects/index.html">Explore Projects</a>
+                    </section>
+                </article>
+
+                <!-- RIGHT: SIDEBAR -->
+                <aside class="exp-aside">
+                    <section class="panel panel--compact">
+                        <h2 class="aside-title">Projects at Infosys</h2>
+
+                        <div class="project-list">
+                            <a class="project-item" href="../../projects/DCF-valuation-engine/index.html">
+                                <div class="pi-title">DCF Valuation Engine (Python)</div>
+                                <div class="pi-meta">Automation • Modeling • Excel outputs</div>
+                                <div class="pi-cta">Open →</div>
+                            </a>
+
+                            <div class="project-item project-item--static">
+                                <div class="pi-title">Grupo Bimbo UK</div>
+                                <div class="pi-meta">Tax • Expenses • Cash Management</div>
+                                <div class="pi-note">Engagement delivery & finance process optimization</div>
+                            </div>
+
+                            <div class="project-item project-item--static">
+                                <div class="pi-title">Grupo Bimbo Barcel</div>
+                                <div class="pi-meta">GL • AP • AR • Tax</div>
+                                <div class="pi-note">Implementation support & testing governance</div>
+                            </div>
+
+                            <div class="project-item project-item--static">
+                                <div class="pi-title">Grupo Bimbo India</div>
+                                <div class="pi-meta">Tax • Expenses</div>
+                                <div class="pi-note">Local compliance and process alignment</div>
+                            </div>
+
+                            <div class="project-item project-item--static">
+                                <div class="pi-title">Workflow Automation (n8n)</div>
+                                <div class="pi-meta">Pipelines • Alerts • Reporting</div>
+                                <div class="pi-note">End-to-end automation for analytics delivery</div>
+                            </div>
+
+                            <a class="project-item" href="../../projects/blog-analytics-platform/index.html">
+                                <div class="pi-title">Analytics &amp; Reporting Platform</div>
+                                <div class="pi-meta">Dashboards • Reporting • Insights</div>
+                                <div class="pi-cta">Open →</div>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="panel panel--compact">
+                        <h2 class="aside-title">Quick Keywords</h2>
+                        <div class="keyword-grid" aria-label="Keywords">
+                            <span class="pill pill--soft">CRP</span>
+                            <span class="pill pill--soft">Fit-Gap</span>
+                            <span class="pill pill--soft">UAT</span>
+                            <span class="pill pill--soft">Panaya</span>
+                            <span class="pill pill--soft">Valuation</span>
+                            <span class="pill pill--soft">Forecasting</span>
+                            <span class="pill pill--soft">Automation</span>
+                            <span class="pill pill--soft">Stakeholders</span>
+                        </div>
+                    </section>
                 </aside>
             </div>
         </section>
-        <section class="back-link container">
-            <a class="btn" href="../index.html">Back to Experience</a>
-        </section>
     </main>
-    <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Omkar Mandve.</p></div></footer>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Omkar Mandve.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

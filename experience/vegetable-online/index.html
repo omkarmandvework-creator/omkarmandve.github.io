@@ -1,66 +1,201 @@
 <!DOCTYPE html>
+<!-- Vegetable Online – Experience detail page (modernized UI) -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vegetable Online | Omkar Mandve</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vegetable Online experience – founder work delivering essential goods and building rural supply chains during lockdown." />
+
+  <title>Vegetable Online | Experience | Omkar Mandve</title>
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="./experience.css" />
+
+  <script defer src="../../assets/js/script.js"></script>
 </head>
+
 <body>
-
-<header class="site-header">
+  <header class="site-header">
     <nav class="navbar container">
-        <div class="brand"><a href="../../index.html">Omkar&nbsp;Mandve</a></div>
-        <ul class="nav-menu">
-            <li><a href="../index.html">Experience</a></li>
-        </ul>
+      <div class="brand"><a href="../../index.html">Omkar&nbsp;Mandve</a></div>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../projects/index.html">Projects</a></li>
+        <li><a href="../index.html" aria-current="page">Experience</a></li>
+        <li><a href="../../blog/index.html">Blog</a></li>
+        <li><a href="../../skills/index.html">Skills</a></li>
+        <li><a href="../../about/index.html">About</a></li>
+        <li><a href="../../contact/index.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main class="container">
-    <h1>Vegetable Online </h1>
-    <p class="lead">Founder | May 2020 – Aug 2020</p>
+  <main id="main">
+    <!-- HERO -->
+    <section class="exp-hero">
+      <div class="container">
+        <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Experience</a>
+          <span class="sep">/</span>
+          <span aria-current="page">Vegetable Online</span>
+        </nav>
 
-    <h2>Responsibility</h2>
-    <p>
-        <li>Founded and managed an e-commerce venture delivering essential agricultural goods to towns, ensuring uninterrupted supply
-        during the lockdown.</li>
-        <li>Built and managed a local supply chain network sourcing directly from 20–30 farmers per village, reducing intermediaries and
-        spoilage.</li>
-       <li>Oversaw end-to-end operations including sourcing, inventory management, order processing, and last-mile delivery.</li>
-       <li>Coordinated with ASHA workers and community leaders for last-mile distribution, expanding reach and building trust.</li>
-       <li>Negotiated with farmers and suppliers to maintain quality, competitive pricing, and continuous supply during peak demand.</li>
-       <li>Analyzed demand patterns and customer preferences to expand operations across 8+ small towns.</li>
-    </p>
+        <div class="exp-hero-grid">
+          <div class="exp-hero-left">
+            <h1>Vegetable Online — Founder</h1>
+            <p class="lead">May 2020 – Aug 2020 • Built an essential goods delivery network during lockdown.</p>
 
-    <h2>Impact</h2>
-    <ul>
-        <li>Delivered 10,000+ customer orders across ~3 months</li>
-        <li>Reduced produce spoilage by 25–30% via direct sourcing</li>
-        <li>Lowered procurement costs by 50–55%</li>
-        <li>Provided income stability to 20+ local farmers</li>
-        <li>Scaled operations across 8+ towns with limited infrastructure</li>
-        <li>Achieved consistent delivery coverage across multiple towns despite limited logistics infrastructure.</li>
-    </ul>
+            <div class="exp-chips" aria-label="Key tags">
+              <span class="chip">Supply Chain</span>
+              <span class="chip">Last-Mile Delivery</span>
+              <span class="chip">Vendor/Farmer Network</span>
+              <span class="chip">Operations</span>
+              <span class="chip">Demand Analysis</span>
+              <span class="chip">Entrepreneurship</span>
+            </div>
+          </div>
 
-    <h2>Skills</h2>
-    <p>
-        <li>Entrepreneurship</li>
-        <li>Business Strategy & Execution</li>
-        <li>Vendor & Farmer Relationship Management</li> 
-        <li>Supply Chain Operations</li> 
-        <li>Business Strategy</li>
-        <li>Logistics Optimization</li> 
-        <li>Demand Analysis & Market Assessment</li>
-    </p>
-</main>
+          <div class="exp-hero-right">
+            <div class="kpi-grid" aria-label="Highlights">
+              <div class="kpi">
+                <div class="kpi-label">Orders Delivered</div>
+                <div class="kpi-value">10,000+</div>
+                <div class="kpi-note">~3 months</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-label">Coverage</div>
+                <div class="kpi-value">8+</div>
+                <div class="kpi-note">small towns</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-label">Cost Reduction</div>
+                <div class="kpi-value">50–55%</div>
+                <div class="kpi-note">procurement savings</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<footer class="site-footer">
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="exp-section">
+      <div class="container exp-two-col">
+        <!-- LEFT -->
+        <article class="exp-main">
+          <section class="panel">
+            <h2>Role Summary</h2>
+            <p>
+              I founded and operated an e-commerce venture delivering essential agricultural goods to towns, ensuring uninterrupted
+              supply during lockdown. I built a farmer-sourcing model and coordinated last-mile distribution through community networks.
+            </p>
+
+            <div class="info-cards">
+              <div class="info-card">
+                <h3>Direct Sourcing</h3>
+                <p>Sourced from 20–30 farmers per village, reducing intermediaries and minimizing spoilage.</p>
+              </div>
+              <div class="info-card">
+                <h3>Operations Ownership</h3>
+                <p>Managed sourcing, inventory, order processing, and last-mile delivery end-to-end.</p>
+              </div>
+              <div class="info-card">
+                <h3>Community Distribution</h3>
+                <p>Coordinated with ASHA workers and community leaders to expand reach and build trust.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2>Responsibilities</h2>
+            <ul class="bullets">
+              <li>Founded and managed an e-commerce venture delivering essential agricultural goods to towns during lockdown.</li>
+              <li>Built a local supply chain sourcing directly from 20–30 farmers per village to reduce intermediaries and spoilage.</li>
+              <li>Oversaw end-to-end operations: sourcing, inventory management, order processing, and last-mile delivery.</li>
+              <li>Coordinated with ASHA workers and community leaders for last-mile distribution, expanding reach and building trust.</li>
+              <li>Negotiated with farmers and suppliers to maintain quality, competitive pricing, and continuous supply during peak demand.</li>
+              <li>Analyzed demand patterns and customer preferences to expand operations across 8+ small towns.</li>
+            </ul>
+          </section>
+
+          <section class="panel">
+            <h2>Impact</h2>
+            <div class="impact-grid">
+              <div class="impact-card">
+                <div class="impact-title">Scale</div>
+                <p>Delivered 10,000+ customer orders across ~3 months.</p>
+              </div>
+
+              <div class="impact-card">
+                <div class="impact-title">Spoilage Reduction</div>
+                <p>Reduced produce spoilage by ~25–30% via direct sourcing.</p>
+              </div>
+
+              <div class="impact-card">
+                <div class="impact-title">Procurement Savings</div>
+                <p>Lowered procurement costs by ~50–55% by minimizing intermediaries.</p>
+              </div>
+
+              <div class="impact-card">
+                <div class="impact-title">Farmer Income Stability</div>
+                <p>Provided income stability to 20+ local farmers through steady demand.</p>
+              </div>
+
+              <div class="impact-card">
+                <div class="impact-title">Geographic Coverage</div>
+                <p>Scaled operations across 8+ towns with limited infrastructure.</p>
+              </div>
+
+              <div class="impact-card">
+                <div class="impact-title">Delivery Reliability</div>
+                <p>Maintained consistent delivery coverage despite constrained logistics.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel exp-actions">
+            <a class="btn" href="../index.html">Back to Experience</a>
+            <a class="btn btn-secondary" href="../../projects/index.html">Explore Projects</a>
+          </section>
+        </article>
+
+        <!-- RIGHT -->
+        <aside class="exp-aside">
+          <section class="panel panel--compact">
+            <h2 class="aside-title">Skills</h2>
+            <div class="keyword-grid" aria-label="Skills keywords">
+              <span class="pill pill--soft">Entrepreneurship</span>
+              <span class="pill pill--soft">Business Strategy</span>
+              <span class="pill pill--soft">Supply Chain Ops</span>
+              <span class="pill pill--soft">Logistics Optimization</span>
+              <span class="pill pill--soft">Vendor Management</span>
+              <span class="pill pill--soft">Demand Analysis</span>
+              <span class="pill pill--soft">Execution</span>
+            </div>
+          </section>
+
+          <section class="panel panel--compact">
+            <h2 class="aside-title">Snapshot</h2>
+            <ul class="mini-facts">
+              <li><span>Period</span><strong>May 2020 – Aug 2020</strong></li>
+              <li><span>Model</span><strong>Direct farmer sourcing</strong></li>
+              <li><span>Last-mile</span><strong>Community distribution</strong></li>
+              <li><span>Coverage</span><strong>8+ towns</strong></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-        <p>&copy; <span id="year"></span> Omkar Mandve</p>
+      <p>&copy; <span id="year"></span> Omkar Mandve</p>
     </div>
-</footer>
-
+  </footer>
 </body>
 </html>
-

@@ -48,6 +48,8 @@ section {
     background: #1e293b;
     padding: 20px;
     border-radius: 12px;
+    position: relative;
+    min-height: 150px;
 }
 
 .download-card a {
@@ -58,6 +60,9 @@ section {
     color: white;
     text-decoration: none;
     border-radius: 6px;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .download-card a:hover {
