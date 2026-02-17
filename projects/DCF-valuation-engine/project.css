@@ -3,7 +3,7 @@
    Consistent with ERP-CRP Playbook design
 */
 
-:root{
+:root {
   --panel-bg: rgba(22, 39, 62, 0.65);
   --panel-bg-hover: rgba(22, 39, 62, 0.8);
   --panel-border: rgba(96, 165, 250, 0.2);
@@ -22,8 +22,15 @@
   --radius-sm: 12px;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -32,7 +39,10 @@ body {
   line-height: 1.6;
 }
 
-.container { width: min(1100px, 92vw); margin: 0 auto; }
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
 
 /* Header */
 header {
@@ -99,7 +109,7 @@ section h2 {
   font-weight: 700;
 }
 
-section > p {
+section>p {
   color: var(--text-muted);
   line-height: 1.8;
   max-width: 75ch;
@@ -322,6 +332,7 @@ section > p {
 
 /* Responsive */
 @media (max-width: 768px) {
+
   .image-grid,
   .download-grid,
   .overview-cards {
@@ -345,5 +356,3 @@ section > p {
     padding: 1.5rem;
   }
 }
-
-
