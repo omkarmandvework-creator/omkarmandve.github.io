@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <!--
-    Skills and expertise page. This page categorizes Omkar's competencies
-    across valuation, ERP finance and analytics/automation. Use lists and
-    cards to organize skills for quick scanning.
+  Skills page – redesigned for a client-facing portfolio:
+  hero + capability cards + tool stack + proof highlights
 -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Skills and expertise of Omkar Mandve – valuation, ERP finance, analytics and automation." />
+    <meta name="description"
+        content="Skills and expertise of Omkar Mandve – valuation, Oracle ERP finance, analytics, and automation." />
     <title>Skills | Omkar Mandve</title>
+
+    <!-- Global site styles -->
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="./skills.css" />
+
     <script defer src="../assets/js/script.js"></script>
 </head>
+
 <body>
     <header class="site-header">
         <nav class="navbar container">
@@ -29,45 +36,219 @@
             </ul>
         </nav>
     </header>
+
     <main id="main">
-        <section class="page-header">
+        <!-- HERO -->
+        <section class="skills-hero">
             <div class="container">
                 <h1>Skills &amp; Expertise</h1>
-                <p class="lead">Technical and domain capabilities.</p>
+                <p class="lead">
+                    I combine <strong>finance domain depth</strong>, <strong>Oracle ERP delivery</strong>, and
+                    <strong>automation</strong>
+                    to deliver faster, cleaner, decision-ready outcomes.
+                </p>
+
+                <div class="chips" aria-label="Key capability tags">
+                    <span class="chip">Valuation &amp; Financial Modeling</span>
+                    <span class="chip">Oracle Cloud ERP Finance</span>
+                    <span class="chip">CRP / Fit-Gap</span>
+                    <span class="chip">Testing Governance (Panaya)</span>
+                    <span class="chip">Python Automation</span>
+                    <span class="chip">Executive Reporting</span>
+                </div>
+
+                <div class="kpi-row" aria-label="What clients get">
+                    <div class="kpi">
+                        <div class="kpi-title">Client Outcome</div>
+                        <div class="kpi-value">Clarity</div>
+                        <div class="kpi-note">decision-ready outputs</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-title">Delivery Style</div>
+                        <div class="kpi-value">Structured</div>
+                        <div class="kpi-note">controls, evidence, governance</div>
+                    </div>
+                    <div class="kpi">
+                        <div class="kpi-title">Differentiator</div>
+                        <div class="kpi-value">Automation</div>
+                        <div class="kpi-note">repeatability &amp; speed</div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- CAPABILITIES -->
         <section class="skills-section">
-            <div class="container grid">
-                <div class="card">
-                    <h3>Valuation &amp; Modelling</h3>
-                    <ul>
-                        <li>Discounted Cash Flow (DCF)</li>
-                        <li>Weighted Average Cost of Capital (WACC)</li>
-                        <li>Capital Asset Pricing Model (CAPM)</li>
-                        <li>Scenario &amp; sensitivity analysis</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Oracle ERP Finance</h3>
-                    <ul>
-                        <li>General Ledger, AR/AP &amp; Tax modules</li>
-                        <li>Fixed Assets, Cash Management, Expenses</li>
-                        <li>Conference Room Pilot (CRP) facilitation</li>
-                        <li>Testing &amp; fit‑gap analysis</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Analytics &amp; Automation</h3>
-                    <ul>
-                        <li>Python &amp; pandas for data processing</li>
-                        <li>Power BI dashboards &amp; DAX</li>
-                        <li>Excel modelling &amp; VBA automation</li>
-                        <li>SQL &amp; data visualization</li>
-                    </ul>
+            <div class="container">
+                <header class="section-head">
+                    <h2>Core Capabilities</h2>
+                    <p class="sub">
+                        Grouped for fast scanning by hiring managers and consulting clients.
+                    </p>
+                </header>
+
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="card-top">
+                            <h3>Valuation &amp; Modeling</h3>
+                            <p class="card-sub">Investment-grade analysis &amp; defensible assumptions.</p>
+                        </div>
+                        <ul class="list">
+                            <li>Discounted Cash Flow (DCF), terminal value methods</li>
+                            <li>WACC, CAPM, cost of equity/debt</li>
+                            <li>Comparable company / precedent comps (where applicable)</li>
+                            <li>Scenario planning &amp; sensitivity analysis</li>
+                            <li>Forecast design: revenue, margins, working capital</li>
+                        </ul>
+                        <div class="pill-row" aria-label="Valuation skills">
+                            <span class="pill">DCF</span>
+                            <span class="pill">WACC</span>
+                            <span class="pill">CAPM</span>
+                            <span class="pill">Sensitivity</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-top">
+                            <h3>Oracle ERP Finance</h3>
+                            <p class="card-sub">Implementation execution, stakeholder alignment, and controls.</p>
+                        </div>
+                        <ul class="list">
+                            <li>General Ledger (GL), AR/AP, Tax</li>
+                            <li>Fixed Assets, Cash Management, Expenses</li>
+                            <li>CRP facilitation, process walkthroughs, signoffs</li>
+                            <li>Fit-gap analysis and solution governance</li>
+                            <li>Testing lifecycle: triage, prioritization, closure</li>
+                        </ul>
+                        <div class="pill-row" aria-label="ERP skills">
+                            <span class="pill">CRP</span>
+                            <span class="pill">Fit-Gap</span>
+                            <span class="pill">UAT</span>
+                            <span class="pill">Controls</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-top">
+                            <h3>Analytics &amp; Automation</h3>
+                            <p class="card-sub">Data pipelines, reporting, and repeatable delivery assets.</p>
+                        </div>
+                        <ul class="list">
+                            <li>Python (pandas) for ingestion, validation, transformations</li>
+                            <li>Excel modeling + automation (clean templates &amp; outputs)</li>
+                            <li>Power BI dashboards &amp; metric design</li>
+                            <li>SQL fundamentals and structured querying</li>
+                            <li>Workflow automation (e.g., scheduled runs, alerts)</li>
+                        </ul>
+                        <div class="pill-row" aria-label="Automation skills">
+                            <span class="pill">Python</span>
+                            <span class="pill">Excel</span>
+                            <span class="pill">Power BI</span>
+                            <span class="pill">SQL</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
+
+        <!-- TOOLSTACK -->
+        <section class="skills-section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Tool Stack</h2>
+                    <p class="sub">The tools I use to ship real work products (not just slides).</p>
+                </header>
+
+                <div class="stack-grid">
+                    <div class="stack-card">
+                        <h3>Finance</h3>
+                        <div class="tags">
+                            <span class="tag">Excel (advanced)</span>
+                            <span class="tag">Financial Statements</span>
+                            <span class="tag">KPI &amp; Variance Analysis</span>
+                            <span class="tag">Forecasting</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-card">
+                        <h3>ERP</h3>
+                        <div class="tags">
+                            <span class="tag">Oracle Cloud ERP</span>
+                            <span class="tag">GL / AR / AP</span>
+                            <span class="tag">Fixed Assets</span>
+                            <span class="tag">Cash Mgmt</span>
+                            <span class="tag">Tax</span>
+                            <span class="tag">Expenses</span>
+                            <span class="tag">Testing Governance</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-card">
+                        <h3>Data &amp; Automation</h3>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">pandas</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Workflow Automation</span>
+                            <span class="tag">Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROOF -->
+        <section class="skills-section skills-proof">
+            <div class="container">
+                <div class="proof-card">
+                    <div class="proof-left">
+                        <h2>How this helps clients</h2>
+                        <p class="sub">
+                            I don’t just “know tools” — I build governance and automation around them to improve speed,
+                            quality, and auditability.
+                        </p>
+                        <ul class="list">
+                            <li><strong>Faster cycles:</strong> automation for repeatable analysis and reporting.</li>
+                            <li><strong>Cleaner delivery:</strong> structured CRP / fit-gap closure and testing
+                                governance.</li>
+                            <li><strong>Better decisions:</strong> valuation and forecasting that highlights the
+                                drivers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="proof-right">
+                        <div class="proof-metrics" aria-label="Proof points">
+                            <div class="pm">
+                                <div class="pm-label">Client-ready outputs</div>
+                                <div class="pm-value">Models • Decks • Reports</div>
+                            </div>
+                            <div class="pm">
+                                <div class="pm-label">Work style</div>
+                                <div class="pm-value">Structured + Practical</div>
+                            </div>
+                            <div class="pm">
+                                <div class="pm-label">Strength</div>
+                                <div class="pm-value">Execution + Automation</div>
+                            </div>
+                        </div>
+
+                        <div class="cta-row">
+                            <a class="btn" href="../projects/index.html">See Projects</a>
+                            <a class="btn btn-secondary" href="../contact/index.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
-    <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Omkar Mandve.</p></div></footer>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Omkar Mandve.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
